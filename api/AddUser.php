@@ -3,6 +3,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+session_start();
+
 require_once '../controller/controller.php';
 header('Content-Type: application/json; charset=utf-8');
 
@@ -19,14 +21,30 @@ try {
     $user = $controller->create_user($username, $pswd1);
 
     if ($user) {
+
+        $_SESSION['user'] = $user;
+
+        //JSON cambiado
+        http_response_code(201); // 201 = Created
         echo json_encode([
+            "status"  => "success",
+            "code"    => 201,
+            "message" => "User created correctly",
+            "data"    => $user
+        ], JSON_UNESCAPED_UNICODE);
+       /* echo json_encode([
             'resultado' => $user,
             'exito' => true
-        ], JSON_UNESCAPED_UNICODE);
+        ], JSON_UNESCAPED_UNICODE);*/
     } else {
+
+        //JSON cambiado
+        http_response_code(400);
         echo json_encode([
-            'error' => 'No se ha creado correctamente el usuario',
-            'exito' => false
+            "status"  => "error",
+            "code"    => 400,
+            "message" => "User could not be created (maybe username already exists)",
+            "data"    => null
         ]);
     }
 } catch (Exception $e) {

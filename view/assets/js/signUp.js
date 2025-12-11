@@ -28,17 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let data;
         try {
-          data = JSON.parse(response.ok ? rawText : "{}");
+          data = JSON.parse(rawText);
         } catch (jsonError) {
           throw new Error("Respuesta no es JSON válida: " + rawText);
         }
 
-        if (data.resultado) {
-          parrafo.innerText = "Usuario creado con éxito.";
+        if (data.status === "success") {
+          parrafo.innerText = data.message || "Usuario creado con éxito.";
           parrafo.style.color = "green";
-          localStorage.setItem("actualProfile", JSON.stringify(data.resultado));
+
+          // localStorage.setItem("actualProfile", JSON.stringify(data.data));
+
+          // Ir a la página principal 
           window.location.href = "main.html";
-          console.log("Datos recibidos:", data.resultado);
+          console.log("Datos recibidos:", data.data);
         } else {
           parrafo.innerText =
             "El Usuario ya existe, elija otro nombre de usuario";
