@@ -22,12 +22,21 @@ $controller = new controller();
 $modify = $controller->modifyAdmin($email, $username, $telephone, $name, $surname, $current_account, $profile_code);
 
 if ($modify) {
-    echo json_encode(["status" => "success",
-  "code" => 200,
-  "message" => "Admin correctly modified"]);
+  http_response_code(200);
+  echo json_encode([
+    "status" => "success",
+    "code" => 200,
+    "message" => "Admin correctly modified",
+    "data" => ""
+  ]);
+
 } else {
-    echo json_encode(["status" => "error",
-  "code" => 400,
-  "message" => "Error modifying the admin"]);
+  http_response_code(400);
+  echo json_encode([
+    "status" => "error",
+    "code" => 400,
+    "message" => "Error modifying the admin",
+    "data" => ""
+  ]);
 }
 ?>

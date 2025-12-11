@@ -20,11 +20,25 @@ $user = $controller->loginUser($username, $password);
 if (is_null($user)) {
     $admin = $controller->loginAdmin($username, $password);
     if (is_null($admin)) {
-        echo json_encode(["error" => 'El nombre de usuario o contraseña son incorrectos.'], JSON_UNESCAPED_UNICODE);
+        http_response_code(400);
+        echo json_encode([
+            "status" => "success",
+            "code" => 400,
+            "message" => "User not found",
+            "data" => $admin
+        ]);
+        // echo json_encode(["error" => 'El nombre de usuario o contraseña son incorrectos.'], JSON_UNESCAPED_UNICODE);
     } else {
-        echo json_encode(["resultado" => $admin], JSON_UNESCAPED_UNICODE);
+        http_response_code(200);
+        echo json_encode([
+            "status" => "success",
+            "code" => 200,
+            "message" => "User found correctly",
+            "data" => $admin
+        ]);
+        //echo json_encode(["resultado" => $admin], JSON_UNESCAPED_UNICODE);
     }
 } else {
-    echo json_encode(["resultado" => $user], JSON_UNESCAPED_UNICODE);
+    echo json_encode(["data" => $user], JSON_UNESCAPED_UNICODE);
 }
 ?>

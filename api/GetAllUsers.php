@@ -11,10 +11,24 @@ $controller = new controller();
 $users = $controller->get_all_users();
 
 if ($users) {
-    echo json_encode([
+    http_response_code(200);
+  echo json_encode([
+    "status" => "success",
+    "code" => 200,
+    "message" => "",
+    "data" => $users
+  ]);
+    /*echo json_encode([
         'resultado' => $users
-    ], JSON_UNESCAPED_UNICODE);
+    ], JSON_UNESCAPED_UNICODE);*/
 } else {
-    echo json_encode(['error' => 'No se ha encontrado usuarios']);
+     http_response_code(400);
+  echo json_encode([
+    "status" => "error",
+    "code" => 400,
+    "message" => "Not users found",
+    "data" => ""
+  ]);
+   // echo json_encode(['error' => 'No se ha encontrado usuarios']);
 }
 ?>
