@@ -23,12 +23,20 @@ $controller = new controller();
 $modify = $controller->modifyUser($email, $username, $telephone, $name, $surname, $gender, $card_no, $profile_code);
 
 if ($modify) {
-    echo json_encode(["status" => "success",
-  "code" => 200,
-  "message" => "User modified correctly"]);
+  http_response_code(200);
+  echo json_encode([
+    "status" => "success",
+    "code" => 200,
+    "message" => "User modified correctly",
+    "data" => ""
+  ]);
 } else {
-    echo json_encode(["status" => "error",
-  "code" => 400,
-  "message" => "Error modifying the user "]);
+  http_response_code(400);
+  echo json_encode([
+    "status" => "error",
+    "code" => 400,
+    "message" => "Error modifying the user ",
+    "data" => ""
+  ]);
 }
 ?>

@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (data["error"]) {
           alert("El nombre de usuario o la contraseña con incorrectas.");
         } else {
-          if (data["resultado"]) {
-            let string = JSON.stringify(data["resultado"]);
+          if (data["data"]) {
+            let string = JSON.stringify(data["data"]);
             let user = JSON.parse(string);
             console.log(user);
             localStorage.setItem("actualProfile", string);

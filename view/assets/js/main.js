@@ -323,7 +323,7 @@ async function modifyUser() {
       if (data.status == "success") {
         document.getElementById("message").innerHTML = data.message;
         document.getElementById("message").style.color = "green";
-        console.log("Code: " + data.code);
+        //console.log("Code: " + data.code);
 
         actualProfile.NAME_ = name;
         actualProfile.SURNAME = surname;
@@ -346,7 +346,7 @@ async function modifyUser() {
       } else {
         document.getElementById("message").innerHTML = data.error;
         document.getElementById("message").style.color = "red";
-        console.log("Code: " + data.code);
+        //console.log("Code: " + data.code);
       }
     } catch (error) {
       //DEBUG console.log(error);
@@ -359,7 +359,7 @@ async function get_all_users() {
   const response = await fetch("../../api/GetAllUsers.php");
   const data = await response.json();
 
-  return data["resultado"];
+  return data["data"];
 }
 
 async function delete_user_admin(id) {
