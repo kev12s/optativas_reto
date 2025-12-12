@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (data.status === "success") {
-          parrafo.innerText = data.message || "Usuario creado con éxito.";
+          parrafo.innerText = data.message;
           parrafo.style.color = "green";
 
           // localStorage.setItem("actualProfile", JSON.stringify(data.data));
@@ -43,13 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
           window.location.href = "main.html";
           console.log("Datos recibidos:", data.data);
         } else {
-          parrafo.innerText =
-            "El Usuario ya existe, elija otro nombre de usuario";
+          parrafo.innerText =data.message;
           parrafo.style.color = "red";
           console.error("Respuesta del servidor:", data);
         }
       } catch (error) {
-        parrafo.innerText = "Error al crear el usuario.";
+        parrafo.innerText = "Error";
         parrafo.style.color = "red";
       }
     });

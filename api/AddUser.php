@@ -48,11 +48,19 @@ try {
         ]);
     }
 } catch (Exception $e) {
-    error_log($e->getMessage());
+
+    http_response_code(500);
+        echo json_encode([
+            "status"  => "error",
+            "code"    => 500,
+            "message" => $e->getMessage(),
+            "data"    => null
+        ]);
+    /*error_log($e->getMessage());
     echo json_encode([
         'error' => 'Error del servidor: ' . $e->getMessage(),
         'exito' => false
-    ]);
+    ]);*/
 }
 ?>
 

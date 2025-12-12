@@ -13,10 +13,24 @@ $controller = new controller();
 $result = $controller->delete_user($id);
 
 if ($result) {
+    http_response_code(200);
     echo json_encode([
-        'result' => TRUE
-    ], JSON_UNESCAPED_UNICODE);
+        "status" => "error",
+        "code" => 200,
+        "message" => "Not users found",
+        "data" => ""
+    ]);
+    /* echo json_encode([
+         'result' => TRUE
+     ], JSON_UNESCAPED_UNICODE);*/
 } else {
-    echo json_encode(['error' => 'User not found']);
+    http_response_code(400);
+    echo json_encode([
+        "status" => "error",
+        "code" => 400,
+        "message" => "Not users found",
+        "data" => ""
+    ]);
+    //echo json_encode(['error' => 'User not found']);
 }
 ?>
