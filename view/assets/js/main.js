@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
    ******************************************************************************************************/
 
   //Loading the current user from localstorage, can be admin or user this is checked later
-  let profile = JSON.parse(localStorage.getItem("actualProfile"));
+  let profile = JSON.parse(localStorage.getItem("actualProfile")); //HACER UN PHP NUEVO QUE COJA EL USUARIO ENTERO CON $SESSION Y GUARDARLO AQUI EN LA PROFILE 
 
   /* ----------HOME---------- */
   const homeBtn = document.getElementById("adjustData");

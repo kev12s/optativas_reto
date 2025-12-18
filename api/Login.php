@@ -22,7 +22,7 @@ if (is_null($user)) {
     if (is_null($admin)) {
         http_response_code(400);
         echo json_encode([
-            "status" => "success",
+            "status" => "error",
             "code" => 400,
             "message" => "User not found",
             "data" => $admin
