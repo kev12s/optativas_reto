@@ -4,7 +4,15 @@ document.addEventListener("DOMContentLoaded", async () => {
    ******************************************************************************************************/
 
   //Loading the current user from localstorage, can be admin or user this is checked later
-  let profile = JSON.parse(localStorage.getItem("actualProfile")); //HACER UN PHP NUEVO QUE COJA EL USUARIO ENTERO CON $SESSION Y GUARDARLO AQUI EN LA PROFILE 
+  //let profile = JSON.parse(localStorage.getItem("actualProfile")); //HACER UN PHP NUEVO QUE COJA EL USUARIO ENTERO CON $SESSION Y GUARDARLO AQUI EN LA PROFILE 
+
+  let response = await fetch(`../../api/GetAdmin.php`, {
+    method:"GET",
+    credentials:"include",
+  });
+  let profile = await response.data;
+
+  
 
   /* ----------HOME---------- */
   const homeBtn = document.getElementById("adjustData");
@@ -36,7 +44,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   //Opens a popup depending on if the profile is a user or admin
   homeBtn.onclick = function () {
     if (["CARD_NO"] in profile) {
-      profile = JSON.parse(localStorage.getItem("actualProfile"));
       document.getElementById("message").innerHTML = "";
       openModifyUserPopup(profile);
     } else if (["CURRENT_ACCOUNT"] in profile) {
@@ -114,7 +121,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (["CARD_NO"] in profile) {
         actualProfile = JSON.parse(localStorage.getItem("actualUser"));
       } else if (["CURRENT_ACCOUNT"] in profile) {
-        actualProfile = JSON.parse(localStorage.getItem("actualProfile"));
+        actualProfile = await response.data;
       }
 
       const profile_code = actualProfile["PROFILE_CODE"];
