@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let string = JSON.stringify(data["data"]);
             let user = JSON.parse(string);
             console.log(user);
-            localStorage.setItem("actualProfile", string); //cookie del usuario
+            //localStorage.setItem("actualProfile", string); //cookie del usuario
             window.location.href = "main.html";
           }
         }

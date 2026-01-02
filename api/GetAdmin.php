@@ -9,7 +9,7 @@ session_start();
 
 if(isset($_SESSION['admin'])){
     $admin = $_SESSION['admin'];
-    unset($user['PSWD']);
+    unset($admin['PSWD']);
     http_response_code(200);
     echo json_encode([
         "status" => "succes",

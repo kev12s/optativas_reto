@@ -6,13 +6,42 @@ document.addEventListener("DOMContentLoaded", async () => {
   //Loading the current user from localstorage, can be admin or user this is checked later
   //let profile = JSON.parse(localStorage.getItem("actualProfile")); //HACER UN PHP NUEVO QUE COJA EL USUARIO ENTERO CON $SESSION Y GUARDARLO AQUI EN LA PROFILE 
 
-  let response = await fetch(`../../api/GetAdmin.php`, {
-    method:"GET",
-    credentials:"include",
-  });
-  let profile = await response.data;
+  let profile = null;
+  let role = null; // 'user' | 'admin'
+  try {
+    // Try to get user session
+    let respUser = await fetch(`../../api/GetUser.php`, {
+      method: "GET",
+      credentials: "include",
+    });
+    if (respUser.ok) {
+      const dataUser = await respUser.json();
+      if (dataUser && dataUser.data) {
+        profile = dataUser.data;
+      }
+    }
+  } catch (e) {
+    // ignore and fallback to admin
+  }
 
-  
+  if (!profile) {
+    try {
+      let respAdmin = await fetch(`../../api/GetAdmin.php`, {
+        method: "GET",
+        credentials: "include",
+      });
+      if (respAdmin.ok) {
+        const dataAdmin = await respAdmin.json();
+        if (dataAdmin && dataAdmin.data) {
+          profile = dataAdmin.data;
+        }
+      }
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  console.log(profile);
 
   /* ----------HOME---------- */
   const homeBtn = document.getElementById("adjustData");
@@ -35,6 +64,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const deleteBtn = document.getElementById("deleteBtn");
   const closePasswordSpan =
     document.getElementsByClassName("closePasswordSpan")[0];
+
+  const logoutBtn = document.querySelector(".logoutBtn");
 
   /******************************************************************************************************
    ****************************************BUTTON FUNCTIONALITIES****************************************
@@ -61,7 +92,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   saveBtnUser.onclick = function () {
-    modifyUser();
+    modifyUser(profile);
   };
 
   /* ----------ADMIN POPUP---------- */
@@ -75,11 +106,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   modifyAdminBtn.onclick = function () {
-    openModifyAdminPopup();
+    openModifyAdminPopup(profile);
   };
 
   saveBtnAdmin.onclick = function () {
-    modifyAdmin();
+    modifyAdmin(profile);
   };
 
   /* ----------SHARED ELEMENTS---------- */
@@ -89,6 +120,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   closePasswordSpan.onclick = function () {
     changePwdModal.style.display = "none";
+  };
+
+  document.querySelector(".logoutIcon").onclick = function () {
+    logout();
   };
 
   //If a popup is clicked outside of the actual area, automatically close the popup
@@ -118,11 +153,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       let actualProfile;
 
-      if (["CARD_NO"] in profile) {
+      /*if (["CARD_NO"] in profile) {
         actualProfile = JSON.parse(localStorage.getItem("actualUser"));
       } else if (["CURRENT_ACCOUNT"] in profile) {
         actualProfile = await response.data;
-      }
+      }*/
+
+      //HABRIA QUE CAMBIAR PARA QUE EL SERVER COMPRUEBE LA CONTRSEAÑAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      actualProfile = profile;
 
       const profile_code = actualProfile["PROFILE_CODE"];
       const userPassword = actualProfile["PSWD"];
@@ -172,7 +210,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log("Code: " + data.code);
             actualProfile.PSWD = newPassword;
             document.getElementById("messageSuccessPassword").innerHTML = data.message;
-            if (["CARD_NO"] in profile) {
+            /*if (["CARD_NO"] in profile) {
               console.log("IS A USER");
               localStorage.setItem("actualUser", JSON.stringify(actualProfile));
             } else if (["CURRENT_ACCOUNT"] in profile) {
@@ -181,7 +219,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 "actualProfile",
                 JSON.stringify(actualProfile)
               );
-            }
+            }*/
 
             setTimeout(() => {
               document.getElementById("messageSuccessPassword").innerHTML = ""; // clean the modified message
@@ -203,10 +241,28 @@ document.addEventListener("DOMContentLoaded", async () => {
  ***********************************************METHODS************************************************
  ******************************************************************************************************/
 
+ /* ----------LOGOUT---------- */
+async function logout() {
+  try{
+    let response = await fetch(`../../api/Logout.php`, {
+      method: "GET",
+      credentials: "include",
+    });
+  }catch(error){
+    
+  }
+
+  if (response.ok){
+    window.location.href = "../view/html/login.html";
+    conseole.log("logout correcto");
+  }else{
+    console.log("Error: " + response.message);
+  }
+}
 /* ----------HOME---------- */
-function openModifyUserPopup(actualProfile) {
+function openModifyUserPopup(actualProfile) /*this profile can be admin or user*/ {
   document.getElementById("message").innerHTML = "";
-  localStorage.setItem("actualUser", JSON.stringify(actualProfile));
+  //localStorage.setItem("actualUser", JSON.stringify(actualProfile));
 
   const usuario = {
     profile_code: actualProfile.PROFILE_CODE,
@@ -236,8 +292,8 @@ function openModifyUserPopup(actualProfile) {
 }
 
 /* ----------USER POPUP---------- */
-async function modifyUser() {
-  const actualProfile = JSON.parse(localStorage.getItem("actualUser"));
+async function modifyUser(actualProfile) {
+  //const actualProfile = JSON.parse(localStorage.getItem("actualUser"));
 
   const usuario = {
     profile_code: actualProfile.PROFILE_CODE,
@@ -340,16 +396,18 @@ async function modifyUser() {
         actualProfile.CARD_NO = card_no;
         actualProfile.GENDER = gender;
 
-        localStorage.setItem("actualUser", JSON.stringify(actualProfile));
+        //localStorage.setItem("actualUser", JSON.stringify(actualProfile));
 
         if (
           ["CURRENT_ACCOUNT"] in
-          JSON.parse(localStorage.getItem("actualProfile"))
+          //JSON.parse(localStorage.getItem("actualProfile"))
+          actualProfile
         ) {
           refreshAdminTable();
-        } else {
+        } /*else {
           localStorage.setItem("actualProfile", JSON.stringify(actualProfile));
-        }
+          
+        }*/
       } else {
         document.getElementById("message").innerHTML = data.error;
         document.getElementById("message").style.color = "red";
@@ -452,9 +510,9 @@ async function refreshAdminTable() {
   }
 }
 
-function openModifyAdminPopup() {
+function openModifyAdminPopup(actualProfile) {
   document.getElementById("messageAdmin").innerHTML = "";
-  const actualProfile = JSON.parse(localStorage.getItem("actualProfile"));
+  //const actualProfile = JSON.parse(localStorage.getItem("actualProfile"));
   let modifyAdminPopup = document.getElementById("modifyAdminPopup");
 
   const usuario = {
@@ -482,8 +540,8 @@ function openModifyAdminPopup() {
   modifyAdminPopup.style.display = "flex";
 }
 
-async function modifyAdmin() {
-  const actualProfile = JSON.parse(localStorage.getItem("actualProfile"));
+async function modifyAdmin(actualProfile) {
+  //const actualProfile = JSON.parse(localStorage.getItem("actualProfile"));
 
   const usuario = {
     profile_code: actualProfile.PROFILE_CODE,
@@ -582,7 +640,7 @@ async function modifyAdmin() {
 
         //DEBUG console.log("New actual profile:", JSON.stringify(actualProfile));
 
-        localStorage.setItem("actualProfile", JSON.stringify(actualProfile));
+        //localStorage.setItem("actualProfile", JSON.stringify(actualProfile));
 
         /*DEBUG console.log(
           "Local storage updated: ",

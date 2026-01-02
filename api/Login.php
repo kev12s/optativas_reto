@@ -10,6 +10,8 @@ header("Content-Type: application/json");
 
 require_once '../controller/controller.php';
 
+session_start();
+
 $data = json_decode(file_get_contents("php://input"), true);
 $username = $data['username'] ?? '';
 $password = $data['password'] ?? '';
@@ -29,6 +31,7 @@ if (is_null($user)) {
         ]);
         // echo json_encode(["error" => 'El nombre de usuario o contraseña son incorrectos.'], JSON_UNESCAPED_UNICODE);
     } else {
+        $_SESSION['admin'] = $admin;
         http_response_code(200);
         echo json_encode([
             "status" => "success",
@@ -39,6 +42,7 @@ if (is_null($user)) {
         //echo json_encode(["resultado" => $admin], JSON_UNESCAPED_UNICODE);
     }
 } else {
+    $_SESSION['user'] = $user;
     echo json_encode(["data" => $user], JSON_UNESCAPED_UNICODE);
 }
 ?>
