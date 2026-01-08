@@ -18,7 +18,8 @@ $response = ["exito" => false];
 try {
 
     $controller = new controller();
-    $user = $controller->create_user($username, $pswd1);
+    $pswd_hash = password_hash($pswd1, PASSWORD_BCRYPT);
+    $user = $controller->create_user($username, $pswd_hash);
 
     if ($user) {
 
