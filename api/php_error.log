@@ -16,3 +16,85 @@ Stack trace:
 #1 C:\xampp\htdocs\optativas_reto\api\AddUser.php(22): controller->create_user('A', '$2y$10$OKnG33Dw...')
 #2 {main}
   thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 90
+[08-Jan-2026 13:51:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('asda', '1234')
+#1 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('asda', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 25
+[08-Jan-2026 13:51:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:90
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(34): UserModel->create_user('a', '$2y$10$tzprzTNt...')
+#1 C:\xampp\htdocs\web\optativas_reto\api\AddUser.php(22): controller->create_user('a', '$2y$10$tzprzTNt...')
+#2 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 90
+[08-Jan-2026 13:51:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:90
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(34): UserModel->create_user('aa', '$2y$10$chdyLhzW...')
+#1 C:\xampp\htdocs\web\optativas_reto\api\AddUser.php(22): controller->create_user('aa', '$2y$10$chdyLhzW...')
+#2 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 90
+[08-Jan-2026 13:51:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:90
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(34): UserModel->create_user('aa', '$2y$10$eU5v/EyV...')
+#1 C:\xampp\htdocs\web\optativas_reto\api\AddUser.php(22): controller->create_user('aa', '$2y$10$eU5v/EyV...')
+#2 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 90
+[08-Jan-2026 13:52:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:90
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(34): UserModel->create_user('aa', '$2y$10$JQ4uCjnw...')
+#1 C:\xampp\htdocs\web\optativas_reto\api\AddUser.php(22): controller->create_user('aa', '$2y$10$JQ4uCjnw...')
+#2 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 90
+[08-Jan-2026 13:52:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:90
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(34): UserModel->create_user('aa', '$2y$10$ygJVGWJy...')
+#1 C:\xampp\htdocs\web\optativas_reto\api\AddUser.php(22): controller->create_user('aa', '$2y$10$ygJVGWJy...')
+#2 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 90
+[08-Jan-2026 13:52:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:90
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(34): UserModel->create_user('aa', '$2y$10$RG0U6BSl...')
+#1 C:\xampp\htdocs\web\optativas_reto\api\AddUser.php(22): controller->create_user('aa', '$2y$10$RG0U6BSl...')
+#2 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 90
+[08-Jan-2026 13:52:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:90
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(34): UserModel->create_user('aa', '$2y$10$0FPMP9sw...')
+#1 C:\xampp\htdocs\web\optativas_reto\api\AddUser.php(22): controller->create_user('aa', '$2y$10$0FPMP9sw...')
+#2 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 90
+[08-Jan-2026 13:54:00 Europe/Berlin] GENDER_RAW: "Female"
+[08-Jan-2026 13:54:00 Europe/Berlin] GENDER_NORM: "female"
+[08-Jan-2026 13:54:06 Europe/Berlin] GENDER_RAW: "Female"
+[08-Jan-2026 13:54:06 Europe/Berlin] GENDER_NORM: "female"
+[08-Jan-2026 13:54:09 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 13:54:09 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 13:54:18 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 13:54:18 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 13:54:29 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 13:54:29 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 13:54:47 Europe/Berlin] GENDER_RAW: "Other"
+[08-Jan-2026 13:54:47 Europe/Berlin] GENDER_NORM: "other"
+[08-Jan-2026 13:59:15 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 13:59:15 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 13:59:30 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 13:59:30 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 13:59:44 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 13:59:44 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 14:00:13 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 14:00:13 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 14:00:50 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 14:00:50 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 14:00:52 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 14:00:52 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 14:00:54 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 14:00:54 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 14:01:03 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 14:01:03 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 14:14:32 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 14:14:32 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 14:14:37 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 14:14:37 Europe/Berlin] GENDER_NORM: "man"
+[08-Jan-2026 14:15:06 Europe/Berlin] GENDER_RAW: "Man"
+[08-Jan-2026 14:15:06 Europe/Berlin] GENDER_NORM: "man"

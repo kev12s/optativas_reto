@@ -293,8 +293,6 @@ function openModifyUserPopup(actualProfile) /*this profile can be admin or user*
 
 /* ----------USER POPUP---------- */
 async function modifyUser(actualProfile) {
-  //const actualProfile = JSON.parse(localStorage.getItem("actualUser"));
-
   const usuario = {
     profile_code: actualProfile.PROFILE_CODE,
     password: actualProfile.PSWD,
@@ -312,43 +310,21 @@ async function modifyUser(actualProfile) {
   const surname = document.getElementById("lastNameUser").value;
   const email = document.getElementById("emailUser").value;
   const username = document.getElementById("usernameUser").value;
-  const telephone = document
-    .getElementById("phoneUser")
-    .value.replace(/\s/g, ""); //remove spaces
+  const telephone = document.getElementById("phoneUser").value.replace(/\s/g, "");
   const gender = document.getElementById("genderUser").value;
   const card_no = document.getElementById("cardNumberUser").value;
 
-  /*DEBUG console.log(
-    "Esto son los datos de los textfields" + profile_code,
-    name,
-    surname,
-    email,
-    username,
-    telephone,
-    gender,
-    card_no
-  );*/
+  const messageBox = document.getElementById("message");
+  messageBox.innerHTML = "";
+  messageBox.style.color = "red";
 
-  if (
-    !name ||
-    !surname ||
-    !email ||
-    !username ||
-    !telephone ||
-    !gender ||
-    !card_no
-  ) {
-    document.getElementById("message").innerHTML =
-      "You must fill all the fields";
-    document.getElementById("message").style.color = "red";
+  if (!name || !surname || !email || !username || !telephone || !gender || !card_no) {
+    messageBox.innerHTML = "You must fill all the fields";
     return;
   }
 
-  //verify if there are changes in the fields
   function hasChanges() {
-    let changes = false;
-
-    if (
+    return (
       name !== usuario.name ||
       surname !== usuario.surname ||
       email !== usuario.email ||
@@ -356,68 +332,56 @@ async function modifyUser(actualProfile) {
       telephone !== usuario.telephone ||
       gender !== usuario.gender ||
       card_no !== usuario.card_no
-    ) {
-      changes = true;
-    }
-    return changes;
+    );
   }
 
   if (!hasChanges()) {
-    document.getElementById("message").innerHTML = "No changes detected";
-    document.getElementById("message").style.color = "red";
-  } else {
-    try {
-      const response = await fetch(
-        `../../api/ModifyUser.php?profile_code=${encodeURIComponent(
-          profile_code
-        )}&name=${encodeURIComponent(name)}&surname=${encodeURIComponent(
-          surname
-        )}&email=${encodeURIComponent(email)}&username=${encodeURIComponent(
-          username
-        )}&telephone=${encodeURIComponent(
-          telephone
-        )}&gender=${encodeURIComponent(gender)}&card_no=${encodeURIComponent(
-          card_no
-        )}`
-      );
-      const data = await response.json();
-      //DEBUG console.log(data);
+    messageBox.innerHTML = "No changes detected";
+    return;
+  }
 
-      if (data.status == "success") {
-        document.getElementById("message").innerHTML = data.message;
-        document.getElementById("message").style.color = "green";
-        //console.log("Code: " + data.code);
+  try {
+    const response = await fetch(
+      `../../api/ModifyUser.php?profile_code=${encodeURIComponent(profile_code)}&name=${encodeURIComponent(name)}&surname=${encodeURIComponent(surname)}&email=${encodeURIComponent(email)}&username=${encodeURIComponent(username)}&telephone=${encodeURIComponent(telephone)}&gender=${encodeURIComponent(gender)}&card_no=${encodeURIComponent(card_no)}`
+    );
 
-        actualProfile.NAME_ = name;
-        actualProfile.SURNAME = surname;
-        actualProfile.EMAIL = email;
-        actualProfile.USER_NAME = username;
-        actualProfile.TELEPHONE = telephone;
-        actualProfile.CARD_NO = card_no;
-        actualProfile.GENDER = gender;
+    const data = await response.json();
 
-        //localStorage.setItem("actualUser", JSON.stringify(actualProfile));
+    if (data.status === "success") {
+      messageBox.innerHTML = data.message;
+      messageBox.style.color = "green";
 
-        if (
-          ["CURRENT_ACCOUNT"] in
-          //JSON.parse(localStorage.getItem("actualProfile"))
-          actualProfile
-        ) {
-          refreshAdminTable();
-        } /*else {
-          localStorage.setItem("actualProfile", JSON.stringify(actualProfile));
-          
-        }*/
-      } else {
-        document.getElementById("message").innerHTML = data.error;
-        document.getElementById("message").style.color = "red";
-        //console.log("Code: " + data.code);
+      actualProfile.NAME_ = name;
+      actualProfile.SURNAME = surname;
+      actualProfile.EMAIL = email;
+      actualProfile.USER_NAME = username;
+      actualProfile.TELEPHONE = telephone;
+      actualProfile.CARD_NO = card_no;
+      actualProfile.GENDER = gender;
+
+      if ("CURRENT_ACCOUNT" in actualProfile) {
+        refreshAdminTable();
       }
-    } catch (error) {
-      //DEBUG console.log(error);
+
+      return;
     }
+
+    if (data.code === 422 && data.errors) {
+      let html = "<ul>";
+      for (const field in data.errors) {
+        html += `<li>${data.errors[field]}</li>`;
+      }
+      html += "</ul>";
+      messageBox.innerHTML = html;
+      return;
+    }
+
+    messageBox.innerHTML = data.message || "Unknown error";
+  } catch (error) {
+    messageBox.innerHTML = "Network/Server error";
   }
 }
+
 
 /* ----------ADMIN POPUP---------- */
 async function get_all_users() {
@@ -541,8 +505,6 @@ function openModifyAdminPopup(actualProfile) {
 }
 
 async function modifyAdmin(actualProfile) {
-  //const actualProfile = JSON.parse(localStorage.getItem("actualProfile"));
-
   const usuario = {
     profile_code: actualProfile.PROFILE_CODE,
     password: actualProfile.PSWD,
@@ -559,103 +521,71 @@ async function modifyAdmin(actualProfile) {
   const surname = document.getElementById("lastNameAdmin").value;
   const email = document.getElementById("emailAdmin").value;
   const username = document.getElementById("usernameAdmin").value;
-  const telephone = document
-    .getElementById("phoneAdmin")
-    .value.replace(/\s/g, ""); //remove spaces
+  const telephone = document.getElementById("phoneAdmin").value.replace(/\s/g, "");
   const current_account = document.getElementById("currentAccountAdmin").value;
 
-  /*DEBUG console.log(
-    "Esto son los datos de los textfields" + profile_code,
-    name,
-    surname,
-    email,
-    username,
-    telephone,
-    current_account
-  );*/
+  const messageBox = document.getElementById("messageAdmin");
+  messageBox.innerHTML = "";
+  messageBox.style.color = "red";
 
-  if (
-    !name ||
-    !surname ||
-    !email ||
-    !username ||
-    !telephone ||
-    !current_account
-  ) {
-    document.getElementById("messageAdmin").innerHTML =
-      "You must fill all the fields";
-    document.getElementById("messageAdmin").style.color = "red";
+  if (!name || !surname || !email || !username || !telephone || !current_account) {
+    messageBox.innerHTML = "You must fill all the fields";
     return;
   }
 
-  //verify if there are changes in the fields
   function hasChanges() {
-    let changes = false;
-
-    if (
+    return (
       name !== usuario.name ||
       surname !== usuario.surname ||
       email !== usuario.email ||
       username !== usuario.username ||
       telephone !== usuario.telephone ||
       current_account !== usuario.current_account
-    ) {
-      changes = true;
-    }
-    return changes;
+    );
   }
 
   if (!hasChanges()) {
-    document.getElementById("messageAdmin").innerHTML = "No changes detected";
-    document.getElementById("messageAdmin").style.color = "red";
-  } else {
-    try {
-      const response = await fetch(
-        `../../api/ModifyAdmin.php?profile_code=${encodeURIComponent(
-          profile_code
-        )}&name=${encodeURIComponent(name)}&surname=${encodeURIComponent(
-          surname
-        )}&email=${encodeURIComponent(email)}&username=${encodeURIComponent(
-          username
-        )}&telephone=${encodeURIComponent(
-          telephone
-        )}&current_account=${encodeURIComponent(current_account)}`
-      );
+    messageBox.innerHTML = "No changes detected";
+    return;
+  }
 
-      const data = await response.json();
-      //DEBUG console.log(data);
+  try {
+    const response = await fetch(
+      `../../api/ModifyAdmin.php?profile_code=${encodeURIComponent(profile_code)}&name=${encodeURIComponent(name)}&surname=${encodeURIComponent(surname)}&email=${encodeURIComponent(email)}&username=${encodeURIComponent(username)}&telephone=${encodeURIComponent(telephone)}&current_account=${encodeURIComponent(current_account)}`
+    );
 
-      if (data.status == "success") {
-        document.getElementById("messageAdmin").innerHTML = data.message;
-        document.getElementById("messageAdmin").style.color = "green";
-        console.log("Code: " + data.code);
-        console.log("se ha modificado ");
+    const data = await response.json();
 
-        actualProfile.NAME_ = name;
-        actualProfile.SURNAME = surname;
-        actualProfile.EMAIL = email;
-        actualProfile.USER_NAME = username;
-        actualProfile.TELEPHONE = telephone;
-        actualProfile.CURRENT_ACCOUNT = current_account;
+    if (data.status === "success") {
+      messageBox.innerHTML = data.message;
+      messageBox.style.color = "green";
 
-        //DEBUG console.log("New actual profile:", JSON.stringify(actualProfile));
+      actualProfile.NAME_ = name;
+      actualProfile.SURNAME = surname;
+      actualProfile.EMAIL = email;
+      actualProfile.USER_NAME = username;
+      actualProfile.TELEPHONE = telephone;
+      actualProfile.CURRENT_ACCOUNT = current_account;
 
-        //localStorage.setItem("actualProfile", JSON.stringify(actualProfile));
-
-        /*DEBUG console.log(
-          "Local storage updated: ",
-          localStorage.getItem("actualProfile")
-        );*/
-      } else {
-        document.getElementById("messageAdmin").innerHTML = data.message;
-        document.getElementById("messageAdmin").style.color = "red";
-        console.log("Code: " + data.code);
-      }
-    } catch (error) {
-      //DEBUG console.log(error);
+      return;
     }
+
+    if (data.code === 422 && data.errors) {
+      let html = "<ul>";
+      for (const field in data.errors) {
+        html += `<li>${data.errors[field]}</li>`;
+      }
+      html += "</ul>";
+      messageBox.innerHTML = html;
+      return;
+    }
+
+    messageBox.innerHTML = data.message || "Unknown error";
+  } catch (error) {
+    messageBox.innerHTML = "Network/Server error";
   }
 }
+
 
 /* ----------SHARED ELEMENTS---------- */
 function resetPasswordModal() {
