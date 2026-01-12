@@ -1,0 +1,80 @@
+.shoeDetailMain {
+  min-height: 100vh;
+  background: var(--background-color);
+  display: flex;
+  justify-content: center;
+  padding: 120px 16px 350px;
+}
+
+.shoeDetailCard {
+  width: 900px;
+  max-width: 100%;
+  background: #f7f7f7;
+  border-radius: 18px;
+  padding: 26px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+}
+
+.shoeImgBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shoeImg {
+  width: 240px;
+  max-width: 100%;
+}
+
+.shoeName {
+  font-size: 32px;
+  margin: 0;
+}
+
+.shoeDesc {
+  margin: 6px 0 14px;
+  color: #444;
+}
+
+.shoePrice {
+  font-size: 26px;
+  color: red;
+  font-weight: bold;
+}
+
+.shoeField {
+  margin-top: 14px;
+}
+
+.shoeLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.shoeSelect {
+  width: 240px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.shoeStock {
+  margin-top: 12px;
+  color: green;
+  font-weight: 600;
+}
+
+.addToCartBtn {
+  margin-top: 20px;
+  width: 100%;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
