@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/shoeDetail.css" />
+    <script src="../assets/js/shoeDetail.js"></script>
+
   </head>
 
   <body>
@@ -47,14 +49,14 @@
 
         <!-- INFO -->
         <div class="shoeInfo">
-          <h1 class="shoeName">Nike Air Max 90</h1>
-          <p class="shoeDesc">Green sneakers</p>
+          <h1 class="shoeName" id="shoeName">Nike Air Max 90</h1>
+          <p class="shoeDesc" id="shoeDesc">Green sneakers</p>
 
-          <p class="shoePrice">89.99 €</p>
+          <p class="shoePrice" id="shoePrice">89.99 €</p>
 
           <div class="shoeField">
             <label class="shoeLabel">Size</label>
-            <select class="shoeSelect">
+            <select class="shoeSelect" id="shoeSizeSelect">
               <option>38</option>
               <option>39</option>
               <option>40</option>
@@ -63,9 +65,9 @@
             </select>
           </div>
 
-          <p class="shoeStock">Only 30 units left!</p>
+          <p class="shoeStock" id="shoeStock">Only 30 units left!</p>
 
-          <button class="addToCartBtn" type="button">
+          <button class="addToCartBtn" type="button" id="addToCartBtn">
             Add to cart
           </button>
         </div>

@@ -178,3 +178,63 @@ Stack trace:
 #2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('jlopez', '1234')
 #3 {main}
   thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[15-Jan-2026 12:49:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:49:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:49:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:49:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:55:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:55:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:02:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:03:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(1)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:11:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:17:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:17:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:18:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62

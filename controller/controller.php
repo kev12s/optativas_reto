@@ -1,6 +1,7 @@
 <?php
 require_once '../Config/Database.php';
 require_once '../model/UserModel.php';
+require_once '../model/ShoeModel.php';
 
 
 class controller
@@ -57,6 +58,10 @@ class controller
     public function modifyPassword($profile_code, $password)
     {
         return $this->UserModel->modifyPassword($profile_code, $password);
+    }
+    public function getShoeById(int $shoe_id) {
+        $shoeModel = new ShoeModel();
+        return $shoeModel->getShoeById($shoe_id);
     }
 }
 ?>
