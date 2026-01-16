@@ -6,9 +6,51 @@
 
 .headHome {
   display: flex;
-  justify-content: space-between;
-  padding-right: 1%;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 1% 0;
 }
+
+/*Nav Bar*/
+.mainNav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: #00000088;
+  border-radius: 40px;
+}
+
+.mainNav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #101416;
+  padding: 12px 24px;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: #f0f0f0;
+}
+
+.adjustData {
+  text-decoration: none;
+  color: #101416;
+  padding: 12px 24px;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.adjustData:hover {
+  background-color: #d3d3d3;
+}
+
 
 :root {
   --background-color: #f1f1f1;
@@ -183,6 +225,7 @@ html {
     padding: 12px;
   }
 }
+
 /*Home Page*/
 .topPic {
   width: 10%;
@@ -213,20 +256,6 @@ html {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
-}
-
-.adjustData {
-  width: 200px;
-  height: 50px;
-  background-color: #ffffff;
-  border-style: solid;
-  border-color: #000;
-  cursor: pointer;
-}
-
-.adjustData:hover {
-  background-color: #d3d3d3;
-  transition-duration: 0.5s;
 }
 
 .checkUsOut {
