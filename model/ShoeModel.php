@@ -10,7 +10,7 @@ class ShoeModel {
     }
 
     public function getShoeById(int $shoe_id) {
-        $sql = "SELECT ID, PRICE, MODEL, SIZE, EXCLUSIVE, MANUFACTER_DATE, COLOR, ORIGIN, BRAND, RESERVED, STOCK
+        $sql = "SELECT ID, PRICE, MODEL, SIZE, EXCLUSIVE, MANUFACTER_DATE, COLOR, ORIGIN, BRAND, RESERVED, STOCK, IMAGE_FILE
                 FROM SHOE
                 WHERE ID = :id
                 LIMIT 1";
@@ -25,15 +25,14 @@ class ShoeModel {
             return null;
         }
 
-        // Adaptación a lo que espera tu paintShoe() en JS:
-        // No hay imagen de momento (creamos una)
+        
         return [
             "id" => (int)$shoe["ID"],
             "model" => $shoe["MODEL"],
             "description" => $shoe["BRAND"] . " - " . $shoe["COLOR"] . " (" . $shoe["ORIGIN"] . ")",
             "price" => (float)$shoe["PRICE"],
             "stock" => (int)($shoe["STOCK"] ?? 0),
-            "image" => "../assets/img/shoes/example_shoe.png",
+            "image_file" => $shoe["IMAGE_FILE"],
             "sizes" => [ (int)$shoe["SIZE"] ]
         ];
     }
