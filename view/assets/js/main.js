@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
   } catch (e) {
-    // ignore and fallback to admin
+    // ignore 
   }
 
   if (!profile) {
@@ -65,7 +65,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const closePasswordSpan =
     document.getElementsByClassName("closePasswordSpan")[0];
 
+  /*.......load shoes to the grid.......*/
   const logoutBtn = document.querySelector(".logoutBtn");
+  
 
   /******************************************************************************************************
    ****************************************BUTTON FUNCTIONALITIES****************************************
@@ -122,9 +124,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     changePwdModal.style.display = "none";
   };
 
-  document.querySelector(".logoutIcon").onclick = function () {
+  logoutBtn.onclick = function () {
     logout();
   };
+
+  gridContainer.onlcikck
 
   //If a popup is clicked outside of the actual area, automatically close the popup
   window.onclick = function (event) {
@@ -609,4 +613,63 @@ async function delete_user(id) {
   } else {
     window.location.href = "login.html";
   }
+}
+
+const gridContainer = document.getElementById('grid-container');
+/*----------LOAD SHOES TO THE GRID----------*/ 
+async function loadSneakers() {
+    try {
+     
+
+        const response = await fetch('../../api/GetShoes.php'); //cambiar por metodo de Alis
+        
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        
+        const shoes = await response.json();
+        
+        // Clean container
+        gridContainer.innerHTML = '';
+        
+        // for each to create the card of each sheo
+        shoes.forEach(shoe => {
+            const card = createSneakerCard(shoe);
+            gridContainer.appendChild(card);
+        });
+        
+    } catch (error) {
+        console.error('Error loading shoes:', error);
+    }
+}
+
+// create the card
+function createSneakerCard(shoe) {
+    const card = document.createElement('div');
+    card.className = 'sneaker-card';
+    
+    // se puede guardar en localstorage o enviar por post?
+    card.dataset.shoe = JSON.stringify(shoe);
+    
+    card.innerHTML = `
+        <img src="${shoe.imagen || 'default-image.jpg'}" 
+             alt="${shoe.nombre}" 
+             class="sneaker-image"
+             onerror="this.src='default-image.jpg'">
+        <div class="sneaker-info">
+            <div class="sneaker-brand">${shoe.marca || ''}</div>
+            <h3 class="sneaker-name">${shoe.nombre}</h3>
+            <div class="sneaker-price">$${shoe.precio.toFixed(2)}</div>
+        </div>
+    `;
+    
+    // when click on the card, redirect to buy window
+    card.addEventListener('click', () => {
+        sessionStorage.setItem('shoe', JSON.stringify(shoe));
+    
+    
+    window.location.href = 'detalle.html';
+    });
+    
+    return card;
 }
