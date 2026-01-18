@@ -51,6 +51,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const changePwdBtn = document.getElementById("changePwdBtn");
   const saveBtnUser = document.getElementById("saveBtnUser");
 
+  /*----------SNEAKER CHECK POPUP----------*/
+  const checkSneakerBtn = document.getElementById("checkSneakers");
+  const sneakerPopUp = document.getElementById("checkSneakerPopUp");
   /* ----------ADMIN POPUP---------- */
   const modifyAdminPopup = document.getElementById("modifyAdminPopup");
   const closeAdminSpan = document.getElementsByClassName("close")[0];
@@ -95,6 +98,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     modifyUser(profile);
   };
 
+  /*----------SNEAKER CHECK POPUP----------*/
+  checkSneakerBtn.onclick = function () {
+    openSneakerPopUpCheck();
+  };
+
   /* ----------ADMIN POPUP---------- */
   closeAdminSpan.onclick = function () {
     adminTableModal.style.display = "none";
@@ -136,6 +144,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       modifyAdminPopup.style.display = "none";
     } else if (event.target == changePwdModal) {
       changePwdModal.style.display = "none";
+    } else if (event.target == sneakerPopUp) {
+      sneakerPopUp.style.display = "none";
     }
   };
 
@@ -473,6 +483,25 @@ async function refreshAdminTable() {
     accountNum.innerHTML = "No users available.";
   }
 }
+
+// PRUEBA SNEAKER POPUP INICIO
+function openSneakerPopUpCheck(){
+  let checkSneaker =document.getElementById("checkSneakerPopUp")
+  checkSneaker.style.display = "flex";
+}
+
+const itemsSneakers = document.querySelectorAll(".sneakerItem");
+const detail = document.getElementById("sneakerDetail");
+
+itemsSneakers.forEach(item => {
+  item.addEventListener("click", () => {
+    detail.textContent = "INFO ZAPATILLA";
+  });
+});
+
+
+
+// PRUEBA SNEAKER POPUP FIN
 
 function openModifyAdminPopup(actualProfile) {
   document.getElementById("messageAdmin").innerHTML = "";

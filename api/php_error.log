@@ -98,3 +98,43 @@ Stack trace:
 [08-Jan-2026 14:14:37 Europe/Berlin] GENDER_NORM: "man"
 [08-Jan-2026 14:15:06 Europe/Berlin] GENDER_RAW: "Man"
 [08-Jan-2026 14:15:06 Europe/Berlin] GENDER_NORM: "man"
+[09-Jan-2026 09:16:12 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:16:12 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:16:12 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
+[09-Jan-2026 09:16:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
+[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
+[09-Jan-2026 09:16:15 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:16:15 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:16:15 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
+[09-Jan-2026 09:16:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 24
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 24
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 24
+[09-Jan-2026 09:17:54 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
+[09-Jan-2026 09:17:54 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
+[09-Jan-2026 09:17:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 24
+[09-Jan-2026 09:26:15 Europe/Berlin] GENDER_RAW: "Man"
+[09-Jan-2026 09:26:15 Europe/Berlin] GENDER_NORM: "man"
+[12-Jan-2026 08:49:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(19): UserModel->loginUser('mariam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('mariam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25

@@ -18,7 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
             let user = JSON.parse(string);
             console.log(user);
             //localStorage.setItem("actualProfile", string); //cookie del usuario
-            window.location.href = "main.html";
+            if(["CARD_NO"] in data["data"]){
+              console.log("okey USER");
+              window.location.href = "main.html";
+              
+            }
+            else{
+              console.log("okey ADMIN");
+              window.location.href = "mainAdmin.html";
+              
+            }
           }
         }
       } else {

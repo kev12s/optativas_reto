@@ -229,7 +229,7 @@ html {
   transition-duration: 0.5s;
 }
 
-.checkUsOut {
+.checkSneakers {
   width: 200px;
   height: 50px;
   background-color: #101416;
@@ -238,7 +238,7 @@ html {
   cursor: pointer;
 }
 
-.checkUsOut:hover {
+.checkSneakers:hover {
   background-color: #4d4a4a;
   transition-duration: 0.5s;
 }
@@ -301,6 +301,17 @@ li {
 }
 
 .modifyAdminPopup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 999;
+}
+
+.checkSneakerPopUp {
   display: none;
   position: fixed;
   inset: 0;
@@ -421,6 +432,36 @@ li {
   padding: 24px;
 }
 
+/* SNEAKERS POPUP PRUEBA INICIO */
+.popupCardSneaker {
+  width: 100%;
+  max-width: 980px;
+  background: var(--background-color, #f1f1f1);
+  border-radius: 18px;
+  border: 4px black solid;
+  padding: 24px;
+  display: flex;
+  gap: 0;
+}
+.sneakerList {
+  width: 250px;         
+  background: #f1f1f1;
+  overflow-y: auto;     
+  border-right: 4px black solid;
+}
+.sneakerItem {
+  padding: 15px;
+  cursor: pointer;
+}
+.sneakerItem:hover {
+  background: #696868;
+}
+.sneakerDetail {
+  flex: 1;                
+  background: white;      
+  border-radius: 0 14px 14px 0
+}
+/* SNEAKERS POPUP PRUEBA FIN */
 .profileForm {
   width: 100%;
   max-width: 100%;
