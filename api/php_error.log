@@ -138,3 +138,33 @@ Stack trace:
 #1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('mariam', '1234')
 #2 {main}
   thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[18-Jan-2026 21:14:53 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:14:55 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:14:55 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:14:56 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:14:56 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:14:56 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:14:56 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:14:57 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:16:10 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:16:24 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:16:28 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:16:48 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:16:52 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:18:30 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:18:36 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:18:40 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
+[18-Jan-2026 21:23:26 Europe/Berlin] GENDER_RAW: "Man"
+[18-Jan-2026 21:23:26 Europe/Berlin] GENDER_NORM: "man"
+[18-Jan-2026 21:23:32 Europe/Berlin] GENDER_RAW: "Man"
+[18-Jan-2026 21:23:32 Europe/Berlin] GENDER_NORM: "man"
+[18-Jan-2026 21:23:35 Europe/Berlin] GENDER_RAW: "Man"
+[18-Jan-2026 21:23:35 Europe/Berlin] GENDER_NORM: "man"
+[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_RAW: "Man"
+[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_NORM: "man"
+[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_RAW: "Man"
+[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_NORM: "man"
+[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_RAW: "Man"
+[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_NORM: "man"
+[18-Jan-2026 21:23:43 Europe/Berlin] GENDER_RAW: "Man"
+[18-Jan-2026 21:23:43 Europe/Berlin] GENDER_NORM: "man"

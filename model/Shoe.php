@@ -1,6 +1,6 @@
 <?php
 
-class User extends Profile {
+class Shoe {
     private $id;
     private $price;
     private $model;

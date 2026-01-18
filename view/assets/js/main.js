@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   console.log(profile);
-
+  loadSneakers();
+  console.log("zapas cargadas");
+  
   /* ----------HOME---------- */
   const homeBtn = document.getElementById("adjustData");
 
@@ -645,7 +647,7 @@ async function delete_user(id) {
 }
 
 const gridContainer = document.getElementById('grid-container');
-/*----------LOAD SHOES TO THE GRID----------*/ 
+/*----------LOAD SHOES TO THE GRID----------*/
 async function loadSneakers() {
     try {
      
