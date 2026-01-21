@@ -19,7 +19,7 @@ class ShoeModel
 
     public function get_all_shoes()
     {
-        $query = "SELECT * FROM SHOE_";
+        $query = "SELECT * FROM SHOE";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

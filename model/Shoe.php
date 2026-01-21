@@ -12,9 +12,10 @@ class Shoe {
     private $brand;
     private $reserved;
     private $stock;
+    private $image;
 
 
-    public function __construct($id, $price, $model, $size, $exclusive, $manufacture_date, $color, $origin, $brand, $reserved, $stock) {
+    public function __construct($id, $price, $model, $size, $exclusive, $manufacture_date, $color, $origin, $brand, $reserved, $stock, $image = null) {
         $this->id = $id;
         $this->price = $price;
         $this->model = $model;
@@ -26,7 +27,8 @@ class Shoe {
         $this->brand = $brand;
         $this->reserved = $reserved;
         $this->stock = $stock;
-        }
+        $this->image = $image;
+    }
     public function getid() {
         return $this->id; 
     }
@@ -93,6 +95,12 @@ class Shoe {
     }
     public function setstock($stock) {
         $this->stock = $stock;
+    }
+    public function getimage() {
+        return $this->image;
+    }
+    public function setimage($image) {
+        $this->image = $image;
     }
 
     public function __toString() {

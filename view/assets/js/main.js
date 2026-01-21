@@ -42,7 +42,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   console.log(profile);
-  loadShoes();
+  
+  // Define gridContainer before calling loadShoes
+  const gridContainer = document.getElementById('grid-container');
+  loadShoes(gridContainer);
   console.log("zapas cargadas");
   
   /* ----------HOME---------- */
@@ -69,9 +72,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const deleteBtn = document.getElementById("deleteBtn");
   const closePasswordSpan =
     document.getElementsByClassName("closePasswordSpan")[0];
+  const logoutIcon = document.getElementsByClassName("logoutIcon")[0];
 
   /*.......load shoes to the grid.......*/
-  const logoutBtn = document.querySelector(".logoutBtn");
+  
   
 
   /******************************************************************************************************
@@ -134,11 +138,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     changePwdModal.style.display = "none";
   };
 
-  logoutBtn.onclick = function () {
+  logoutIcon.onclick = function () {
     logout();
   };
 
-  gridContainer.onlcikck
 
   //If a popup is clicked outside of the actual area, automatically close the popup
   window.onclick = function (event) {
@@ -646,31 +649,53 @@ async function delete_user(id) {
   }
 }
 
-const gridContainer = document.getElementById('grid-container');
 /*----------LOAD SHOES TO THE GRID----------*/
-async function loadShoes() {
+async function loadShoes(gridContainer) {
     try {
-     
+        console.log("Loading shoes...");
+        
+        // Check if grid container exists
+        if (!gridContainer) {
+            console.error("Grid container not found!");
+            return;
+        }
 
         const response = await fetch('../../api/GetAllShoes.php'); 
         
         if (!response.ok) {
-            throw new Error('Error en la respuesta del servidor');
+            console.log('Error in the fetch');
         }
         
-        const shoes = await response.json();
+        const data = await response.json();
+        console.log("API Response:", data);
         
         // Clean container
         gridContainer.innerHTML = '';
         
-        // for each to create the card of each sheo
-        shoes.forEach(shoe => {
+        // Check if data exists and has items
+        if (!data || !data.data) {
+            console.error("Invalid data format:", data);
+            gridContainer.innerHTML = '<p>No shoes found</p>';
+            return;
+        }
+        
+        if (data.data.length === 0) {
+            console.log("No shoes in database");
+            gridContainer.innerHTML = '<p>No shoes available</p>';
+            return;
+        }
+        
+        // Create card for each shoe
+        data.data.forEach(shoe => {
             const card = createShoeCard(shoe);
             gridContainer.appendChild(card);
         });
         
     } catch (error) {
-        
+        console.error("Error loading shoes:", error);
+        if (gridContainer) {
+            gridContainer.innerHTML = '<p>Error loading shoes</p>';
+        }
     }
 }
 
@@ -679,19 +704,15 @@ function createShoeCard(shoe) {
     const card = document.createElement('div');
     card.className = 'shoe-card';
     
-    // se puede guardar en localstorage o enviar por post?
-    card.dataset.shoe = JSON.stringify(shoe);
-    
     const shoeName = shoe.MODEL;
     const shoePrice = shoe.PRICE;
     const shoeBrand = shoe.BRAND;
-    const shoeImage = shoe.IMAGE;
-    
+    const shoeImage = shoe.IMAGE_FILE;
+
     card.innerHTML = `
-        <img src="${shoeImage || 'default-image.jpg'}" 
+        <img src="../assets/img/${shoeImage || 'default_img.jpg'}" 
              alt="${shoeName}" 
-             class="shoe-image"
-             onerror="this.src='default-image.jpg'">
+             class="shoe-image">
         <div class="shoe-info">
             <div class="shoe-brand">${shoeBrand || ''}</div>
             <h3 class="shoe-name">${shoeName}</h3>
