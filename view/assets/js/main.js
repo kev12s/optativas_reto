@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   console.log(profile);
-  loadSneakers();
+  loadShoes();
   console.log("zapas cargadas");
   
   /* ----------HOME---------- */
@@ -103,9 +103,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   };
 
   /*----------SNEAKER CHECK POPUP----------*/
-  checkSneakerBtn.onclick = function () {
+  /*checkSneakerBtn.onclick = function () {
     openSneakerPopUpCheck();
-  };
+  };*/
 
   /* ----------ADMIN POPUP---------- */
   closeAdminSpan.onclick = function () {
@@ -648,11 +648,11 @@ async function delete_user(id) {
 
 const gridContainer = document.getElementById('grid-container');
 /*----------LOAD SHOES TO THE GRID----------*/
-async function loadSneakers() {
+async function loadShoes() {
     try {
      
 
-        const response = await fetch('../../api/GetShoes.php'); //cambiar por metodo de Alis
+        const response = await fetch('../../api/GetAllShoes.php'); 
         
         if (!response.ok) {
             throw new Error('Error en la respuesta del servidor');
@@ -665,32 +665,37 @@ async function loadSneakers() {
         
         // for each to create the card of each sheo
         shoes.forEach(shoe => {
-            const card = createSneakerCard(shoe);
+            const card = createShoeCard(shoe);
             gridContainer.appendChild(card);
         });
         
     } catch (error) {
-        console.error('Error loading shoes:', error);
+        
     }
 }
 
 // create the card
-function createSneakerCard(shoe) {
+function createShoeCard(shoe) {
     const card = document.createElement('div');
-    card.className = 'sneaker-card';
+    card.className = 'shoe-card';
     
     // se puede guardar en localstorage o enviar por post?
     card.dataset.shoe = JSON.stringify(shoe);
     
+    const shoeName = shoe.MODEL;
+    const shoePrice = shoe.PRICE;
+    const shoeBrand = shoe.BRAND;
+    const shoeImage = shoe.IMAGE;
+    
     card.innerHTML = `
-        <img src="${shoe.imagen || 'default-image.jpg'}" 
-             alt="${shoe.nombre}" 
-             class="sneaker-image"
+        <img src="${shoeImage || 'default-image.jpg'}" 
+             alt="${shoeName}" 
+             class="shoe-image"
              onerror="this.src='default-image.jpg'">
-        <div class="sneaker-info">
-            <div class="sneaker-brand">${shoe.marca || ''}</div>
-            <h3 class="sneaker-name">${shoe.nombre}</h3>
-            <div class="sneaker-price">$${shoe.precio.toFixed(2)}</div>
+        <div class="shoe-info">
+            <div class="shoe-brand">${shoeBrand || ''}</div>
+            <h3 class="shoe-name">${shoeName}</h3>
+            <div class="shoe-price">$${shoePrice.toFixed(2)}</div>
         </div>
     `;
     

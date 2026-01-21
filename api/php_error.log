@@ -168,3 +168,80 @@ Stack trace:
 [18-Jan-2026 21:23:37 Europe/Berlin] GENDER_NORM: "man"
 [18-Jan-2026 21:23:43 Europe/Berlin] GENDER_RAW: "Man"
 [18-Jan-2026 21:23:43 Europe/Berlin] GENDER_NORM: "man"
+[21-Jan-2026 10:35:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 10:38:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 10:40:12 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 10:43:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 10:54:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 10:54:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 10:54:47 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 11:57:54 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 11:58:03 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 11:58:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[21-Jan-2026 12:00:11 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
+#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
