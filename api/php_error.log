@@ -238,3 +238,5 @@ Stack trace:
 #0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
 #1 {main}
   thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[22-Jan-2026 12:09:45 Europe/Berlin] GENDER_RAW: "Man"
+[22-Jan-2026 12:09:45 Europe/Berlin] GENDER_NORM: "man"
