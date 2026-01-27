@@ -65,13 +65,14 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
   width: 100%;
   bottom: 0;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 /*Login / Signup*/
@@ -281,13 +282,12 @@ html {
 }
 
 p.copyright {
-  position: absolute;
-  width: 100%;
+  flex-basis: 100%;
+  margin-top: 12px;
   color: #fff;
-  line-height: 40px;
-  font-size: 0.7em;
+  line-height: 1.4;
+  font-size: 0.85rem;
   text-align: center;
-  bottom: 0;
 }
 
 ul {
