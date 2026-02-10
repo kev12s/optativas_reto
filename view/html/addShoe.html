@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Shoe</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/addShoe.css" />
+    <script defer src="../assets/js/addShoe.js"></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="headHome">
+      <img
+        src="../assets/img/Nike logo for some reason.png"
+        alt="Nike logo"
+        class="topPic"
+      />
+
+      <a href="login.html" class="logoutIcon" title="Logout">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
+          <path
+            fill-rule="evenodd"
+            d="M16.5 3.75a1.5 1.5 0 0 1 1.5 1.5v13.5a1.5 1.5 0 0 1-1.5 1.5h-6a1.5 1.5 0 0 1-1.5-1.5V15a.75.75 0 0 0-1.5 0v3.75a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5.25a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3V9A.75.75 0 1 0 9 9V5.25a1.5 1.5 0 0 1 1.5-1.5h6ZM5.78 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 0 0 0 1.06l3 3a.75.75 0 0 0 1.06-1.06l-1.72-1.72H15a.75.75 0 0 0 0-1.5H4.06l1.72-1.72a.75.75 0 0 0 0-1.06Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </a>
+    </header>
+
+    <!-- MAIN -->
+    <main class="addShoeMain">
+      <section class="addShoeCard">
+        
+        <div class="shoeImgBox">
+          <img
+            id="shoeImg"
+            class="shoeImg"
+            src="../assets/img/default_shoe.png"
+            alt="Default shoe"
+          />
+        </div>
+
+        <div class="shoeInfo">
+          <h1 class="shoeName">Add product</h1>
+          <p class="shoeDesc">Fill the fields to add a new shoe</p>
+
+          <form id="addShoeForm">
+            <div class="formRow">
+              <div class="shoeField">
+                <label class="shoeLabel">Brand</label>
+                <select class="shoeSelect" id="brand" name="brand" required>
+                  <option value="" disabled selected>Select brand</option>
+                  <option value="Nike">Nike</option>
+                  <option value="Adidas">Adidas</option>
+                  <option value="Puma">Puma</option>
+                </select>
+              </div>
+
+              <div class="shoeField">
+                <label class="shoeLabel">Model</label>
+                <input class="shoeInput" type="text" id="model" name="model" maxlength="30" required />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="shoeField">
+                <label class="shoeLabel">Size</label>
+                <select class="shoeSelect" id="size" name="size" required>
+                  <option value="" disabled selected>Select size</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                </select>
+              </div>
+
+              <div class="shoeField">
+                <label class="shoeLabel">Color</label>
+                <input class="shoeInput" type="text" id="color" name="color" maxlength="20" required />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="shoeField">
+                <label class="shoeLabel">Origin</label>
+                <input class="shoeInput" type="text" id="origin" name="origin" maxlength="20" required />
+              </div>
+
+              <div class="shoeField">
+                <label class="shoeLabel">Manufacture date</label>
+                <input class="shoeInput" type="date" id="manufacture_date" name="manufacture_date" />
+              </div>
+            </div>
+
+            <div class="formRow">
+              <div class="shoeField">
+                <label class="shoeLabel">Stock</label>
+                <input class="shoeInput" type="number" id="stock" name="stock" min="0" />
+              </div>
+
+              <div class="shoeField">
+                <label class="shoeLabel">Price (€)</label>
+                <input class="shoeInput" type="number" id="price" name="price" step="0.1" min="0" required />
+              </div>
+            </div>
+
+            <div class="shoeField">
+              <label class="shoeLabel">Exclusive</label>
+              <div class="exclusiveRow">
+                <input type="checkbox" id="exclusive" name="exclusive" value="TRUE" />
+                <span>Yes</span>
+              </div>
+            </div>
+
+            <input type="hidden" name="reserved" value="FALSE" />
+
+            <button class="addToCartBtn" type="submit">
+              Add product
+            </button>
+
+            <p id="formMsg" class="formMsg"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="desc">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <ul class="footerList">
+        <li class="listTitle">Contacto</li>
+        <li>Dirección: xxxxxxx, xxx, xxx</li>
+        <li>Teléfono: +34 678 439 478</li>
+        <li>Email: ejemplo@gmail.com</li>
+        <li>Horario: L-V 8:00-14:25</li>
+      </ul>
+
+      <ul>
+        <li class="listTitle">Enlaces útiles</li>
+        <li>Inicio</li>
+        <li>Servicios</li>
+        <li>Acerca de nosotros</li>
+      </ul>
+
+      <div class="map">
+        <p class="listTitle">Ubicacion</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.4665578500917!2d-2.9767551238415364!3d43.30449177112096!"
+          width="300"
+          height="200"
+          style="border: 0"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <p class="copyright">
+        © 2025 [PH]. Todos los derechos reservados
+      </p>
+    </footer>
+  </body>
+</html>

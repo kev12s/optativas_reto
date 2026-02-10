@@ -67,5 +67,14 @@ class controller
     {
         return $this->ShoeModel->get_all_shoes();
     }
+    
+    public function getShoeById(int $shoe_id) {
+
+        return $this->ShoeModel->getShoeById($shoe_id);
+    }
+
+     public function insertShoe(array $data): int{
+        return $this->ShoeModel->insertShoe($data);
+     }
 }
 ?>

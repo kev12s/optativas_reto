@@ -98,164 +98,145 @@ Stack trace:
 [08-Jan-2026 14:14:37 Europe/Berlin] GENDER_NORM: "man"
 [08-Jan-2026 14:15:06 Europe/Berlin] GENDER_RAW: "Man"
 [08-Jan-2026 14:15:06 Europe/Berlin] GENDER_NORM: "man"
-[09-Jan-2026 09:16:12 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:16:12 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:16:12 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
-[09-Jan-2026 09:16:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
-[09-Jan-2026 09:16:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
-[09-Jan-2026 09:16:15 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:16:15 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:16:15 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\xampp\htdocs\optativas_reto\api\Login.php on line 23
-[09-Jan-2026 09:16:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 25
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 24
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 24
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:17:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 24
-[09-Jan-2026 09:17:54 Europe/Berlin] PHP Warning:  Undefined array key "username" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 20
-[09-Jan-2026 09:17:54 Europe/Berlin] PHP Warning:  Undefined array key "password" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 21
-[09-Jan-2026 09:17:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\optativas_reto\api\Login.php on line 24
-[09-Jan-2026 09:26:15 Europe/Berlin] GENDER_RAW: "Man"
-[09-Jan-2026 09:26:15 Europe/Berlin] GENDER_NORM: "man"
-[12-Jan-2026 08:49:33 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+[09-Jan-2026 08:48:45 Europe/Berlin] GENDER_RAW: "Man"
+[09-Jan-2026 08:48:45 Europe/Berlin] GENDER_NORM: "man"
+[09-Jan-2026 08:48:53 Europe/Berlin] GENDER_RAW: "Man"
+[09-Jan-2026 08:48:53 Europe/Berlin] GENDER_NORM: "man"
+[09-Jan-2026 08:49:02 Europe/Berlin] GENDER_RAW: "Man"
+[09-Jan-2026 08:49:02 Europe/Berlin] GENDER_NORM: "man"
+[09-Jan-2026 09:41:54 Europe/Berlin] GENDER_RAW: "Man"
+[09-Jan-2026 09:41:54 Europe/Berlin] GENDER_NORM: "man"
+[09-Jan-2026 09:42:00 Europe/Berlin] GENDER_RAW: "Man"
+[09-Jan-2026 09:42:00 Europe/Berlin] GENDER_NORM: "man"
+[09-Jan-2026 09:52:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(19): UserModel->loginUser('mariam', '1234')
-#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('mariam', '1234')
-#2 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
-[18-Jan-2026 21:14:53 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:14:55 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:14:55 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:14:56 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:14:56 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:14:56 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:14:56 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:14:57 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:16:10 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:16:24 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:16:28 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:16:48 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:16:52 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:18:30 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:18:36 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:18:40 Europe/Berlin] PHP Fatal error:  Cannot declare class User, because the name is already in use in C:\xampp\htdocs\optativas_reto\model\Shoe.php on line 3
-[18-Jan-2026 21:23:26 Europe/Berlin] GENDER_RAW: "Man"
-[18-Jan-2026 21:23:26 Europe/Berlin] GENDER_NORM: "man"
-[18-Jan-2026 21:23:32 Europe/Berlin] GENDER_RAW: "Man"
-[18-Jan-2026 21:23:32 Europe/Berlin] GENDER_NORM: "man"
-[18-Jan-2026 21:23:35 Europe/Berlin] GENDER_RAW: "Man"
-[18-Jan-2026 21:23:35 Europe/Berlin] GENDER_NORM: "man"
-[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_RAW: "Man"
-[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_NORM: "man"
-[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_RAW: "Man"
-[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_NORM: "man"
-[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_RAW: "Man"
-[18-Jan-2026 21:23:37 Europe/Berlin] GENDER_NORM: "man"
-[18-Jan-2026 21:23:43 Europe/Berlin] GENDER_RAW: "Man"
-[18-Jan-2026 21:23:43 Europe/Berlin] GENDER_NORM: "man"
-[21-Jan-2026 10:35:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
-Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('juanP', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('juanP', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 10:38:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:52:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('juanP', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('juanP', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 10:40:12 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:52:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('juanP', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('juanP', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 10:43:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:52:40 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('juanP', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('juanP', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 10:54:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:52:40 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('juanP', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('juanP', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 10:54:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:53:23 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('jlopez', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('jlopez', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 10:54:47 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:53:24 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('jlopez', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('jlopez', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 11:57:54 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:53:27 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('jlopez', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('jlopez', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 11:58:03 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:53:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('jlopez', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('jlopez', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 11:58:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[09-Jan-2026 09:53:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'USER_NAME' in 'where clause' in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php:28
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
+#0 C:\xampp\htdocs\web\optativas_reto\model\UserModel.php(28): PDOStatement->execute()
+#1 C:\xampp\htdocs\web\optativas_reto\controller\controller.php(19): UserModel->loginUser('jlopez', '1234')
+#2 C:\xampp\htdocs\web\optativas_reto\api\Login.php(20): controller->loginUser('jlopez', '1234')
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 12:00:11 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+  thrown in C:\xampp\htdocs\web\optativas_reto\model\UserModel.php on line 28
+[15-Jan-2026 12:49:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
-#3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 19:07:06 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:49:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
-#3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
-[21-Jan-2026 19:07:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'crud_adt.shoe_' doesn't exist in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:24
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:49:30 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
 Stack trace:
-#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(24): PDOStatement->execute()
-#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(68): ShoeModel->get_all_shoes()
-#2 C:\xampp\htdocs\optativas_reto\api\GetAllShoes.php(11): controller->get_all_shoes()
-#3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:49:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:55:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 12:55:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\getShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:02:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(3)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:03:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(1)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:11:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:17:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:17:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[15-Jan-2026 13:18:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ShoeModel" not found in C:\xampp\htdocs\web\optativas_reto\controller\controller.php:62
+Stack trace:
+#0 C:\xampp\htdocs\web\optativas_reto\api\GetShoe.php(34): controller->getShoeById(2)
+#1 {main}
+  thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
+[22-Jan-2026 12:09:45 Europe/Berlin] GENDER_RAW: "Man"
+[22-Jan-2026 12:09:45 Europe/Berlin] GENDER_NORM: "man"
