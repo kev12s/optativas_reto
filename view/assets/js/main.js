@@ -722,10 +722,9 @@ function createShoeCard(shoe) {
     
     // when click on the card, redirect to buy window
     card.addEventListener('click', () => {
-        sessionStorage.setItem('shoe', JSON.stringify(shoe));
-    
-    
-    window.location.href = 'detalle.html';
+      sessionStorage.setItem('shoe', JSON.stringify(shoe));
+        
+      window.location.href = 'shoeDetail.html';
     });
     
     return card;

@@ -79,5 +79,46 @@ class ShoeModel
  
         return (int)$this->conn->lastInsertId();
     }
+    
+    public function getShoesByModel(string $model) {
+        $query = "SELECT ID, PRICE, MODEL, SIZE, EXCLUSIVE, MANUFACTER_DATE, COLOR, ORIGIN, BRAND, RESERVED, STOCK, IMAGE_FILE
+                  FROM SHOE 
+                  WHERE MODEL = :model";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':model', $model);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        $shoes = [];
+        foreach ($result as $row) {
+            $shoes[] = [
+                "id" => (int)$row["ID"],
+                "model" => $row["MODEL"],
+                "description" => $row["BRAND"] . " - " . $row["COLOR"] . " (" . $row["ORIGIN"] . ")",
+                "price" => (float)$row["PRICE"],
+                "stock" => (int)($row["STOCK"] ?? 0),
+                "image_file" => $row["IMAGE_FILE"],
+                "sizes" => [ (int)$row["SIZE"] ]
+            ];
+        }
+        
+        return $shoes;
+    }
+    
+    public function insertOrder(array $data): int {
+        $sql = "INSERT INTO ORDER_ (PROFILE_CODE, SHOE_ID, DATE_, QUANTITY)
+                VALUES (:profile_code, :shoe_id, :date_, :quantity)";
+        
+        $stmt = $this->conn->prepare($sql);
+        
+        $stmt->bindValue(':profile_code', (int)$data['profile_code']);
+        $stmt->bindValue(':shoe_id', (int)$data['shoe_id']);
+        $stmt->bindValue(':date_', $data['date_']);
+        $stmt->bindValue(':quantity', (int)$data['quantity']);
+        
+        $stmt->execute();
+        
+        return (int)$this->conn->lastInsertId();
+    }
 }
 ?>

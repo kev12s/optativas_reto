@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 
+require_once '../Config/Database.php';
 require_once '../model/ShoeModel.php';
 
 function fail(string $msg) {
@@ -62,7 +63,9 @@ $reserved  = ($reserved === 'TRUE') ? 'TRUE' : 'FALSE';
 $image_file = "default_shoe.png";
 
 try {
-    $shoeModel = new ShoeModel();
+    $database = new Database();
+    $db = $database->getConnection();
+    $shoeModel = new ShoeModel($db);
 
     $newId = $shoeModel->insertShoe([
         'price' => (float)$price,

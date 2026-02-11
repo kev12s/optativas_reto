@@ -76,5 +76,13 @@ class controller
      public function insertShoe(array $data): int{
         return $this->ShoeModel->insertShoe($data);
      }
+    
+    public function getShoesByModel(string $model) {
+        return $this->ShoeModel->getShoesByModel($model);
+    }
+    
+    public function insertOrder(array $data): int {
+        return $this->ShoeModel->insertOrder($data);
+    }
 }
 ?>

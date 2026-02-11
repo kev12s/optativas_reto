@@ -240,3 +240,7 @@ Stack trace:
   thrown in C:\xampp\htdocs\web\optativas_reto\controller\controller.php on line 62
 [22-Jan-2026 12:09:45 Europe/Berlin] GENDER_RAW: "Man"
 [22-Jan-2026 12:09:45 Europe/Berlin] GENDER_NORM: "man"
+[10-Feb-2026 16:34:35 Europe/Berlin] Received model: Air Max
+[10-Feb-2026 17:09:04 Europe/Berlin] Received model: Samba
+[10-Feb-2026 17:09:38 Europe/Berlin] Received model: Air Max
+[10-Feb-2026 17:12:21 Europe/Berlin] Received model: Samba
