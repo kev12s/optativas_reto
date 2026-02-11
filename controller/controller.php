@@ -67,6 +67,11 @@ class controller
     {
         return $this->ShoeModel->get_all_shoes();
     }
+
+    public function get_unique_shoes_by_model()
+    {
+        return $this->ShoeModel->get_unique_shoes_by_model();
+    }
     
     public function getShoeById(int $shoe_id) {
 
@@ -79,6 +84,10 @@ class controller
     
     public function getShoesByModel(string $model) {
         return $this->ShoeModel->getShoesByModel($model);
+    }
+
+    public function getSizesByModel(string $model) {
+        return $this->ShoeModel->getSizesByModel($model);
     }
     
     public function insertOrder(array $data): int {

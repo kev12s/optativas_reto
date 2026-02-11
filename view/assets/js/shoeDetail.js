@@ -45,19 +45,16 @@ async function fetchSizesForModel(modelName) {
       .replace(/'/g, '%27')
       .replace(/"/g, '%22');
     
-    const response = await fetch(`../../api/getShoesByModel.php?model=${encodedModel}`);
-    const json = await response.json();
+    const response = await fetch(`../../api/GetSizesByModel.php?model=${encodedModel}`);
+    const data = await response.json();
+    const sizes = data.data; // [38, 39, 40, 41, 42]
     
     const select = document.getElementById("shoeSizeSelect");
     select.innerHTML = "";
     
-    if (json.success && json.data) {
-      // Get all unique sizes
-      const allSizes = json.data.map(shoe => shoe.sizes[0]).filter((size, index, self) => 
-        self.indexOf(size) === index
-      );
-      
-      allSizes.forEach((size) => {
+    if (data.status === "success" && sizes) {
+      // Cargar las tallas en el select
+      sizes.forEach(size => {
         const opt = document.createElement("option");
         opt.value = size;
         opt.textContent = `Size ${size}`;
@@ -65,10 +62,14 @@ async function fetchSizesForModel(modelName) {
       });
     } else {
       // Fallback: show current shoe size
-      const opt = document.createElement("option");
-      opt.value = shoe.SIZE;
-      opt.textContent = `Size ${shoe.SIZE}`;
-      select.appendChild(opt);
+      const shoeData = sessionStorage.getItem('shoe');
+      if (shoeData) {
+        const shoe = JSON.parse(shoeData);
+        const opt = document.createElement("option");
+        opt.value = shoe.SIZE;
+        opt.textContent = `Size ${shoe.SIZE}`;
+        select.appendChild(opt);
+      }
     }
   } catch (e) {
     console.error("Error fetching sizes:", e);

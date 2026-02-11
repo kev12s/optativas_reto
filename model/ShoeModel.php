@@ -27,6 +27,20 @@ class ShoeModel
         return $result;
     }
  
+    public function get_unique_shoes_by_model()
+    {
+        $query = "SELECT MIN(ID) as ID, MODEL, BRAND, COLOR, ORIGIN, IMAGE_FILE, MIN(PRICE) as PRICE, 
+                          GROUP_CONCAT(SIZE ORDER BY SIZE) as SIZES, SUM(STOCK) as STOCK
+                  FROM SHOE 
+                  GROUP BY MODEL, BRAND, COLOR, ORIGIN, IMAGE_FILE
+                  ORDER BY MODEL";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+ 
     public function getShoeById(int $shoe_id) {
         $sql = "SELECT ID, PRICE, MODEL, SIZE, EXCLUSIVE, MANUFACTER_DATE, COLOR, ORIGIN, BRAND, RESERVED, STOCK, IMAGE_FILE
                 FROM SHOE
@@ -103,6 +117,21 @@ class ShoeModel
         }
         
         return $shoes;
+    }
+
+    public function getSizesByModel(string $model) {
+        $query = "SELECT DISTINCT SIZE FROM SHOE WHERE MODEL = :model ORDER BY SIZE";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':model', $model);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        $sizes = [];
+        foreach ($result as $row) {
+            $sizes[] = (int)$row["SIZE"];
+        }
+        
+        return $sizes;
     }
     
     public function insertOrder(array $data): int {

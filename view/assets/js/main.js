@@ -660,10 +660,10 @@ async function loadShoes(gridContainer) {
             return;
         }
 
-        const response = await fetch('../../api/GetAllShoes.php'); 
+        const response = await fetch('../../api/GetUniqueShoes.php'); 
         
         if (!response.ok) {
-            console.log('Error in the fetch');
+            console.log('Error in fetch');
         }
         
         const data = await response.json();
@@ -708,6 +708,7 @@ function createShoeCard(shoe) {
     const shoePrice = shoe.PRICE;
     const shoeBrand = shoe.BRAND;
     const shoeImage = shoe.IMAGE_FILE;
+    
 
     card.innerHTML = `
         <img src="../assets/img/${shoeImage || 'default_img.jpg'}" 
