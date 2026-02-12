@@ -64,7 +64,7 @@ if ($surname === '') {
   $errors['surname'] = 'Surname must be between 2 and 50 characters';
 }
 
-// gender: obligatorio, valores permitidos (AJUSTA a tus valores reales del select)
+
 $gender = trim($_GET['gender'] ?? '');
 
 error_log('GENDER_RAW: ' . json_encode($_GET['gender'] ?? null));
