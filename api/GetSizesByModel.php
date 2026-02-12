@@ -22,10 +22,10 @@ if (isset($_GET['model'])) {
             "data" => $sizes
         ]);
     } else {
-        http_response_code(400);
+        http_response_code(404);
         echo json_encode([
             "status" => "error",
-            "code" => 400,
+            "code" => 404,
             "message" => "No sizes found for this model",
             "data" => ""
         ]);

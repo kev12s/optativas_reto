@@ -14,11 +14,10 @@ if (empty($model)) {
     fail("Model name is required");
 }
 
-// Proper URL decoding
+
 $model = urldecode($model);
 $model = trim($model);
 
-// Debug: log the received model
 error_log("Received model: " . $model);
 
 try {
