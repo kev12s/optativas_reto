@@ -1025,7 +1025,7 @@ async function loadShoes(gridContainer) {
             return;
         }
 
-        const response = await fetch('../../api/GetAllShoes.php'); 
+        const response = await fetch('../../api/GetUniqueShoes.php'); 
         
         if (!response.ok) {
             console.log('Error in the fetch');
