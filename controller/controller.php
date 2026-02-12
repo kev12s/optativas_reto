@@ -93,5 +93,14 @@ class controller
     public function insertOrder(array $data): int {
         return $this->ShoeModel->insertOrder($data);
     }
+    public function modifyShoe($id, $price, $model, $size, $color, $origin, $brand, $stock)
+    {
+        return $this->ShoeModel->modifyShoe($id, $price, $model, $size, $color, $origin, $brand ,$stock);
+    }
+    public function delete_shoe($id)
+    {
+        return $this->ShoeModel->delete_shoe($id);
+    }
+
 }
 ?>

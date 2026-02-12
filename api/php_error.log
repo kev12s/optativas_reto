@@ -347,11 +347,133 @@ Stack trace:
 #1 C:\xampp\htdocs\optativas_reto\controller\controller.php(73): ShoeModel->get_unique_shoes_by_model()
 #2 C:\xampp\htdocs\optativas_reto\api\GetUniqueShoes.php(11): controller->get_unique_shoes_by_model()
 #3 {main}
-  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 38
-[11-Feb-2026 19:32:15 Europe/Berlin] Received model: sdsds
-[11-Feb-2026 19:36:57 Europe/Berlin] Received model: sdsds
-[11-Feb-2026 19:37:01 Europe/Berlin] Received model: sdsds
-[11-Feb-2026 19:37:01 Europe/Berlin] Received model: sdsds
-[11-Feb-2026 19:37:01 Europe/Berlin] Received model: sdsds
-[11-Feb-2026 19:37:05 Europe/Berlin] Received model: Caven
-[11-Feb-2026 19:37:08 Europe/Berlin] Received model: sdsds
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 24
+[27-Jan-2026 08:30:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('anam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('anam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[27-Jan-2026 08:30:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('anam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('anam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[27-Jan-2026 08:30:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('anam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('anam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[27-Jan-2026 08:30:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('anam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('anam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[27-Jan-2026 08:30:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('anam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('anam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[27-Jan-2026 08:31:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('anam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('anam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[27-Jan-2026 08:31:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('anam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('anam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[27-Jan-2026 08:31:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('anam', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('anam', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[27-Jan-2026 08:35:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\optativas_reto\model\UserModel.php:25
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(23): UserModel->loginUser('juanP', '1234')
+#1 C:\xampp\htdocs\optativas_reto\api\Login.php(20): controller->loginUser('juanP', '1234')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\UserModel.php on line 25
+[11-Feb-2026 22:18:07 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:59
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(59): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('1')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(13): controller->delete_shoe('1')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 59
+[11-Feb-2026 22:19:10 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:59
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(59): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('1')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(13): controller->delete_shoe('1')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 59
+[11-Feb-2026 22:19:21 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:59
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(59): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('1')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(13): controller->delete_shoe('1')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 59
+[11-Feb-2026 22:22:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:59
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(59): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('2')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(20): controller->delete_shoe('2')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 59
+[11-Feb-2026 22:22:49 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:59
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(59): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('1')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(20): controller->delete_shoe('1')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 59
+[11-Feb-2026 22:22:55 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:59
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(59): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('1')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(20): controller->delete_shoe('1')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 59
+[11-Feb-2026 22:25:32 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:57
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(57): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('1')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(20): controller->delete_shoe('1')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 57
+[11-Feb-2026 22:27:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:57
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(57): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('1')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(24): controller->delete_shoe('1')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 57
+[11-Feb-2026 22:30:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`crud_adt`.`order_`, CONSTRAINT `order__ibfk_2` FOREIGN KEY (`SHOE_ID`) REFERENCES `shoe` (`ID`) ON DELETE RESTRICT ON UPDATE CASCADE) in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:57
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\model\ShoeModel.php(57): PDOStatement->execute()
+#1 C:\xampp\htdocs\optativas_reto\controller\controller.php(76): ShoeModel->delete_shoe('1')
+#2 C:\xampp\htdocs\optativas_reto\api\DeleteShoe.php(24): controller->delete_shoe('1')
+#3 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 57
+[12-Feb-2026 10:13:49 Europe/Berlin] GENDER_RAW: "Man"
+[12-Feb-2026 10:13:49 Europe/Berlin] GENDER_NORM: "man"
+[12-Feb-2026 10:14:01 Europe/Berlin] GENDER_RAW: "Man"
+[12-Feb-2026 10:14:01 Europe/Berlin] GENDER_NORM: "man"
+[12-Feb-2026 10:22:21 Europe/Berlin] GENDER_RAW: "Man"
+[12-Feb-2026 10:22:21 Europe/Berlin] GENDER_NORM: "man"
+[12-Feb-2026 10:32:40 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function ShoeModel::modifyShoe(), 8 passed in C:\xampp\htdocs\optativas_reto\controller\controller.php on line 72 and exactly 9 expected in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php:29
+Stack trace:
+#0 C:\xampp\htdocs\optativas_reto\controller\controller.php(72): ShoeModel->modifyShoe('11', '79.99', 'Air Max', '45', 'Negro', 'Espa\xC3\xB1a', 'Nike', '53')
+#1 C:\xampp\htdocs\optativas_reto\api\ModifyShoe.php(85): controller->modifyShoe('11', '79.99', 'Air Max', '45', 'Negro', 'Espa\xC3\xB1a', 'Nike', '53')
+#2 {main}
+  thrown in C:\xampp\htdocs\optativas_reto\model\ShoeModel.php on line 29

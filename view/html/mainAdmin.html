@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head class="headHome">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Admin Page</title>
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <script src="../assets/js/main.js"></script>
-  </head>
-  <body>
-    <header class="headHome">
-      <img
-        src="../assets/img/Nike logo for some reason.png"
-        alt="Nike logo"
-        class="topPic"
-      />
 
-      <a href="login.html" class="logoutIcon"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="black"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M16.5 3.75a1.5 1.5 0 0 1 1.5 1.5v13.5a1.5 1.5 0 0 1-1.5 1.5h-6a1.5 1.5 0 0 1-1.5-1.5V15a.75.75 0 0 0-1.5 0v3.75a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5.25a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3V9A.75.75 0 1 0 9 9V5.25a1.5 1.5 0 0 1 1.5-1.5h6ZM5.78 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 0 0 0 1.06l3 3a.75.75 0 0 0 1.06-1.06l-1.72-1.72H15a.75.75 0 0 0 0-1.5H4.06l1.72-1.72a.75.75 0 0 0 0-1.06Z"
-            clip-rule="evenodd"
-          /></svg
-      ></a>
-    </header>
-    <main class="mainHome">
-      <section>
-        <img
-          src="../assets/img/mountainHorizontal.jpg"
-          alt="Photo of mountains"
-          class="mainPic"
-        />
-      </section>
-      <aside class="saveDataBox">
-        <h1>Hello Admin</h1>
-        <div class="buttons">
-          <button id="adjustData" class="adjustData">Adjust data</button>
-          <button id="checkSneakers" class="checkSneakers">Check sneakers</button>
-          
+<head class="headHome">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="../assets/js/mainAdmin.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="headHome">
+    <img src="../assets/img/Nike logo for some reason.png" alt="Nike logo" class="topPic" />
+
+    <nav class="mainNav">
+      <ul>
+        <li>
+          <button id="adjustData" class="btn-adjustData">Admin Panel</button>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/mosi-hickman-blanco-093623349/" class="navLink">Check us out</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a href="#" class="logoutIcon" id="logoutBtnAdmin">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black">
+        <path fill-rule="evenodd"
+          d="M16.5 3.75a1.5 1.5 0 0 1 1.5 1.5v13.5a1.5 1.5 0 0 1-1.5 1.5h-6a1.5 1.5 0 0 1-1.5-1.5V15a.75.75 0 0 0-1.5 0v3.75a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V5.25a3 3 0 0 0-3-3h-6a3 3 0 0 0-3 3V9A.75.75 0 1 0 9 9V5.25a1.5 1.5 0 0 1 1.5-1.5h6ZM5.78 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 0 0 0 1.06l3 3a.75.75 0 0 0 1.06-1.06l-1.72-1.72H15a.75.75 0 0 0 0-1.5H4.06l1.72-1.72a.75.75 0 0 0 0-1.06Z"
+          clip-rule="evenodd" />
+      </svg>
+    </a>
+  </header>
+
+  <main class="admin-dashboard">
+    <div class="admin-header">
+      <h1>Welcome, Administrator</h1>
+      <p>Manage users, products, and system settings from one centralized dashboard</p>
+
+      <div class="admin-stats">
+        <div class="stat-card">
+          <h3>Total Users</h3>
+          <p id="totalUsers">0</p>
         </div>
-      </aside>
-
-      <!-- The Modal -->
-      <div id="adminTableModal" class="adminTableModal">
-        <!-- Modal content -->
-        <div class="adminTableModalContent">
-          <div class="flex-space-between">
-            <button id="modifySelfButton" class="modifySelfButton">
-              Modify Self
-            </button>
-            <span class="close">&times;</span>
-          </div>
-
-          <table class="adminTable" id="adminTable">
-            <tr class="adminTableHead">
-              <th>Username</th>
-              <th>Card Number</th>
-              <th></th>
-            </tr>
-          </table>
+        <div class="stat-card">
+          <h3>Total Products</h3>
+          <p id="totalProducts">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Today's Orders</h3>
+          <p>12</p>
         </div>
       </div>
+    </div>
 
-      <div id="modifyUserPopupAdmin" class="modifyUserPopupAdmin">
+    <div class="admin-actions">
+      <button class="admin-btn" id="manageUsersBtn">
+        <i class="fas fa-users"></i> Manage Users
+      </button>
+      <button class="admin-btn" id="viewProductsBtn">
+        <i class="fas fa-shoe-prints"></i> View All Products
+      </button>
+      <button class="admin-btn" id="checkSneakers">
+        <i class="fas fa-chart-bar"></i> Check Sneakers
+      </button>
+    </div>
+
+    <h2 class="admin-grid-title">Featured Products</h2>
+
+    <div class="main-container">
+      <div id="grid-container" class="grid-container">
+        <!-- Las zapatillas se cargarán aquí automáticamente por main.js -->
+      </div>
+    </div>
+
+    <!-- ADMIN MODAL POPUP -->
+    <div id="adminTableModal" class="adminTableModal">
+      <div class="adminTableModalContent">
+        <div class="flex-space-between">
+          <h2>User Management</h2>
+        </div>
+        <table class="adminTable" id="adminTable">
+          <tr class="adminTableHead">
+            <th>Username</th>
+            <th>Email</th>
+            <th>Card Number</th>
+            <th>Actions</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+   <div id="modifyUserPopupAdmin" class="modifyUserPopupAdmin">
         <div class="popupCard">
           <form class="loginForm profileForm" id="profileForm">
             <div class="profileHeader">
@@ -163,195 +189,168 @@
           </form>
         </div>
       </div>
-<!-- Sneaker Check PopUp  PRUEBA INICIO-->
-      <div id="checkSneakerPopUp" class="checkSneakerPopUp">
-        <div class="popupCardSneaker">
-          <div class="sneakerList">
-            <div class="sneakerItem">Nike Air Max</div>
-            <div class="sneakerItem">Adidas Samba</div>
-            <div class="sneakerItem">Puma Suede</div>
-            <div class="sneakerItem">New Balance 550</div>
-          </div>  
-          <div class="sneakerDetail" id="sneakerDetail">
-            <p>Selecciona una zapatilla</p>
-          </div>
+
+    <!-- Modal de Check Sneakers -->
+    <div id="checkSneakerPopUp" class="checkSneakerPopUp">
+      <div class="popupCardSneaker">
+        <div class="sneakerList" id="sneakerList">
+          <!-- Las zapatillas se cargarán aquí dinámicamente -->
+          <p class="loading-message">Loading sneakers...</p>
+        </div>
+        <div class="sneakerDetail" id="sneakerDetail">
         </div>
       </div>
-<!-- Sneaker Check PopUp  PRUEBA FIN-->
+    </div>
 
-      <div id="modifyAdminPopup" class="modifyAdminPopup">
-        <div class="popupCard">
-          <form class="loginForm profileForm" id="profileForm">
-            <div class="profileHeader">
-              <div class="avatar">
-                <img src="https://placehold.co/280x280/png" alt="avatar" />
-              </div>
-              <div class="infoArea">
-                <div class="fields">
-                  <div class="field half">
-                    <label for="firstName">Name</label>
-                    <input
-                      id="firstNameAdmin"
-                      name="firstName"
-                      type="text"
-                      placeholder="John"
-                    />
-                  </div>
-                  <div class="field half">
-                    <label for="lastName">Surname</label>
-                    <input
-                      id="lastNameAdmin"
-                      name="lastName"
-                      type="text"
-                      placeholder="Doe"
-                    />
-                  </div>
-                  <div class="field full">
-                    <label for="email">Email</label>
-                    <input
-                      id="emailAdmin"
-                      name="email"
-                      type="email"
-                      placeholder="example@example.com"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="fields">
-              <div class="field half">
-                <label for="username">Username</label>
-                <input
-                  id="usernameAdmin"
-                  name="username"
-                  type="text"
-                  placeholder="Example"
-                  disabled
-                />
-              </div>
-
-              <div class="field half">
-                <label for="password">Password</label>
-                <button
-                  type="button"
-                  id="changePwdBtnAdmin"
-                  class="changePwdBtn"
-                >
-                  Change Password
-                </button>
-              </div>
-              <div class="field half">
-                <label for="phone">Phone Number</label>
-                <input
-                  id="phoneAdmin"
-                  name="phone"
-                  type="number"
-                  placeholder="000-000-0000"
-                />
-              </div>
-              <div class="field half">
-                <label for="profileCode">Profile Code</label>
-                <input
-                  id="profileCodeAdmin"
-                  name="profileCode"
-                  type="tel"
-                  placeholder="x"
-                  disabled="disabled"
-                />
-              </div>
-              <div class="field full">
-                <label for="accountNumber">Account Number</label>
-                <input
-                  id="currentAccountAdmin"
-                  name="accountNumber"
-                  type="text"
-                  placeholder="XXXX-XXXX-XXXX-XXXX"
-                />
-              </div>
-            </div>
-            <span style="color: green" ; id="messageAdmin"></span>
-            <div class="actions">
-              <button id="saveBtnAdmin" class="saveBtn" type="button">
-                Save Data
-              </button>
-            </div>
-          </form>
-        </div>
+    <div id="modifyAdminPopup" class="modifyAdminPopup">
+      <div class="popupCard">
+        <form class="loginForm profileForm" id="profileForm">
+          <!-- Contenido del formulario de admin -->
+        </form>
       </div>
+    </div>
 
-      <div id="changePasswordModal" class="changePasswordModal">
-        <div class="changePasswordModalContent">
-          <span class="closePasswordSpan">&times;</span>
-          <h2>Change Password</h2>
-          <form id="changePasswordForm">
-            <label for="currentPassword">Actual Password</label>
-            <input
-              type="password"
-              id="currentPassword"
-              name="currentPassword"
-              required
-            />
-            <span style="color: red" ; id="messageOldPassword"></span>
-
-            <label for="newPassword">New Password</label>
-            <input
-              type="password"
-              id="newPassword"
-              name="newPassword"
-              required
-            />
-
-            <label for="confirmNewPassword">Repeat Password</label>
-            <input
-              type="password"
-              id="confirmNewPassword"
-              name="confirmNewPassword"
-              required
-            />
-            <span style="color: red" ; id="messageWrongPassword"></span>
-
-            <span style="color: green" ; id="messageSuccessPassword"></span>
-            <button type="submit">Confirm</button>
-          </form>
-          <div id="passwordMessage" class="passwordMessage"></div>
-        </div>
+    <div id="changePasswordModal" class="changePasswordModal">
+      <div class="changePasswordModalContent">
+        <!-- Contenido del cambio de contraseña -->
       </div>
-    </main>
-    <footer>
-      <!--Logo goes here-->
-      <p class="desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo.
-      </p>
-      <ul class="footerList">
-        <li class="listTitle">Contacto</li>
-        <li>Dirección: xxxxxxx, xxx, xxx</li>
-        <li>Teléfono: +34 678 439 478</li>
-        <li>Email: ejemplo@gmail.com</li>
-        <li>Horario: L-V 8:00-14:25</li>
-      </ul>
-      <ul>
-        <li class="listTitle">Enlaces útiles</li>
-        <li>Inicio</li>
-        <li>Servicios</li>
-        <li>Acerca de nosotros</li>
-      </ul>
-      <div class="map">
-        <p class="listTitle">Ubicacion</p>
+    </div>
+  </main>
+
+  <footer class="footer-admin">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Admin Dashboard</h3>
+        <p>Secure administration interface for managing website content, users, and products.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li>Address: xxxxxxx, xxx, xxx</li>
+          <li>Phone: +34 678 439 478</li>
+          <li>Email: admin@example.com</li>
+          <li>Schedule: Mon-Fri 8:00-14:25</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#" id="dashboardLink">Dashboard</a></li>
+          <li><a href="#" id="usersManagementLink">User Management</a></li>
+          <li><a href="#" id="productsLink">Products</a></li>
+          <li><a href="#" id="settingsLink">Settings</a></li>
+        </ul>
+      </div>
+      <div class="footer-section map">
+        <h3>Location</h3>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.4665578500917!2d-2.9767551238415364!3d43.30449177112096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e5a896ea04725%3A0x42b47eab7fd92f60!2sC.%20Tartanga%2C%204%2C%2048950%20Erandio%2C%20Vizcaya!5e0!3m2!1ses!2ses!4v1761209636743!5m2!1ses!2ses"
-          width="300"
-          height="200"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+          width="300" height="200" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <p class="copyright">© 2025 [PH]. Todos los derechos reservados</p>
-    </footer>
-  </body>
+    </div>
+    <p class="copyright">© 2025 [PH]. All rights reserved</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Handle admin-specific logout button
+      const logoutBtn = document.getElementById('logoutBtnAdmin');
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          // Use the existing logout function from main.js
+          if (typeof logout === 'function') {
+            logout();
+          }
+        });
+      }
+
+      // Admin action buttons
+      const manageUsersBtn = document.getElementById('manageUsersBtn');
+      if (manageUsersBtn) {
+        manageUsersBtn.addEventListener('click', function () {
+          // SOLO abrir el modal, NO llamar a refreshAdminTable
+          const adminModal = document.getElementById('adminTableModal');
+          if (adminModal) {
+            adminModal.style.display = 'block';
+          }
+        });
+      }
+
+      const viewProductsBtn = document.getElementById('viewProductsBtn');
+      if (viewProductsBtn) {
+        viewProductsBtn.addEventListener('click', function () {
+          // Smooth scroll to products grid
+          const gridContainer = document.getElementById('grid-container');
+          if (gridContainer) {
+            gridContainer.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      }
+
+      // Footer links
+      const footerLinks = {
+        'dashboardLink': function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        },
+        'usersManagementLink': function () {
+          document.getElementById('adjustData')?.click();
+        },
+        'productsLink': function () {
+          document.getElementById('grid-container')?.scrollIntoView({
+            behavior: 'smooth'
+          });
+        },
+        'settingsLink': function () {
+          alert('Settings feature coming soon!');
+        }
+      };
+
+      // Attach event listeners to footer links
+      Object.keys(footerLinks).forEach(linkId => {
+        const link = document.getElementById(linkId);
+        if (link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            footerLinks[linkId]();
+          });
+        }
+      });
+    });
+
+    async function updateAdminStats() {
+      try {
+        // Get total users
+        const usersResponse = await fetch('../../api/GetAllUsers.php');
+        if (usersResponse.ok) {
+          const usersData = await usersResponse.json();
+          if (usersData.data) {
+            document.getElementById('totalUsers').textContent = usersData.data.length;
+          }
+        }
+
+        // Get total products
+        const productsResponse = await fetch('../../api/GetAllShoes.php');
+        if (productsResponse.ok) {
+          const productsData = await productsResponse.json();
+          if (productsData.data) {
+            const totalProducts = document.getElementById('totalProducts');
+            if (totalProducts) {
+              totalProducts.textContent = productsData.data.length;
+            }
+          }
+        }
+
+      } catch (error) {
+        console.error('Error fetching admin statistics:', error);
+      }
+    }
+  </script>
+</body>
+
 </html>
