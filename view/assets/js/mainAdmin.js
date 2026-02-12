@@ -65,10 +65,11 @@ const sneakerDetail = document.getElementById("sneakerDetail");
 
   /* ----------ADMIN POPUP---------- */
   const modifyAdminPopup = document.getElementById("modifyAdminPopup");
-  const changePwdBtnAdmin = document.getElementById("changePwdBtnAdmin");
+  const changePwdBtnAdmin = document.getElementById("changePwdBtn");
   const adminTableModal = document.getElementById("adminTableModal");
   const modifyAdminBtn = document.getElementById("modifySelfButton");
   const saveBtnAdmin = document.getElementById("saveBtnAdmin");
+  const closeAdminSpan = document.querySelector(".adminTableModal .close");
 
   /* ----------SHARED ELEMENTS---------- */
   const changePwdModal = document.getElementById("changePasswordModal");
@@ -117,10 +118,6 @@ const sneakerDetail = document.getElementById("sneakerDetail");
 }
 
   // ----------ADMIN POPUP----------
-  closeAdminSpan.onclick = function () {
-    adminTableModal.style.display = "none";
-  };
-
   changePwdBtnAdmin.onclick = function () {
     changePwdModal.style.display = "block";
     resetPasswordModal();
@@ -133,16 +130,6 @@ const sneakerDetail = document.getElementById("sneakerDetail");
   saveBtnAdmin.onclick = function () {
     modifyAdmin(profile);
   };
-//----------
-
-/* ----------ADMIN POPUP---------- */
-// Cerrar modal de tabla de usuarios
-const closeAdminSpan = document.querySelector(".adminTableModal .close");
-if (closeAdminSpan) {
-  closeAdminSpan.onclick = function () {
-    adminTableModal.style.display = "none";
-  };
-}
 
 
 // Cerrar modales de modificación
@@ -161,7 +148,7 @@ const closeModals = function() {
 // Inicializar cierre de modales
 closeModals();
   /* ----------SHARED ELEMENTS---------- */
-  deleteBtn.onclick = function () {
+ /* deleteBtn.onclick = function () {
     delete_user(profile["PROFILE_CODE"]);
   };
 
@@ -171,7 +158,7 @@ closeModals();
 
   logoutIcon.onclick = function () {
     logout();
-  };
+  };*/
 
 
   //If a popup is clicked outside of the actual area, automatically close the popup
