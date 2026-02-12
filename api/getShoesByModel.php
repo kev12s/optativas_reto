@@ -26,17 +26,29 @@ try {
     $shoes = $controller->getShoesByModel($model);
     
     if ($shoes) {
+        http_response_code(200);
         echo json_encode([
-            'success' => true,
+            'status' => 'success',
+            'code' => 200,
+            'message' => 'Shoes found correctly',
             'data' => $shoes
-        ]);
+        ], JSON_UNESCAPED_UNICODE);
     } else {
+        http_response_code(404);
         echo json_encode([
-            'success' => false,
-            'error' => 'No shoes found for this model'
-        ]);
+            'status' => 'error',
+            'code' => 404,
+            'message' => 'No shoes found for this model',
+            'data' => null
+        ], JSON_UNESCAPED_UNICODE);
     }
 } catch (Throwable $e) {
-    fail("Database error: " . $e->getMessage());
+    http_response_code(500);
+    echo json_encode([
+        'status' => 'error',
+        'code' => 500,
+        'message' => 'Database error: ' . $e->getMessage(),
+        'data' => null
+    ], JSON_UNESCAPED_UNICODE);
 }
 ?>
