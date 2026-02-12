@@ -4,8 +4,14 @@ header('Content-Type: application/json; charset=utf-8');
 require_once '../Config/Database.php';
 require_once '../model/ShoeModel.php';
 
-function fail(string $msg) {
-    echo json_encode(['success' => false, 'error' => $msg]);
+function fail(string $msg, int $code = 400) {
+    http_response_code($code);
+    echo json_encode([
+        'status' => 'error',
+        'code' => $code,
+        'message' => $msg,
+        'data' => null
+    ], JSON_UNESCAPED_UNICODE);
     exit;
 }
 
@@ -81,8 +87,14 @@ try {
         'image_file' => $image_file
     ]);
 
-    echo json_encode(['success' => true, 'id' => $newId]);
+    http_response_code(201);
+    echo json_encode([
+        'status' => 'success',
+        'code' => 201,
+        'message' => 'Shoe added correctly',
+        'data' => ['id' => $newId]
+    ], JSON_UNESCAPED_UNICODE);
 
 } catch (Throwable $e) {
-    fail("Database error");
+    fail("Database error", 500);
 }
