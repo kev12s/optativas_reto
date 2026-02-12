@@ -67,5 +67,14 @@ class controller
     {
         return $this->ShoeModel->get_all_shoes();
     }
+    public function modifyShoe($id, $price, $model, $size, $color, $origin, $brand, $stock)
+    {
+        return $this->ShoeModel->modifyShoe($id, $price, $model, $size, $color, $origin, $brand ,$stock);
+    }
+    public function delete_shoe($id)
+    {
+        return $this->ShoeModel->delete_shoe($id);
+    }
+
 }
 ?>
