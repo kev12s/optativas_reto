@@ -67,7 +67,7 @@ const sneakerDetail = document.getElementById("sneakerDetail");
   const modifyAdminPopup = document.getElementById("modifyAdminPopup");
   const changePwdBtnAdmin = document.getElementById("changePwdBtn");
   const adminTableModal = document.getElementById("adminTableModal");
-  const modifyAdminBtn = document.getElementById("modifySelfButton");
+ // const modifyAdminBtn = document.getElementById("modifySelfButton");
   const saveBtnAdmin = document.getElementById("saveBtnAdmin");
   const closeAdminSpan = document.querySelector(".adminTableModal .close");
 
@@ -118,7 +118,7 @@ const sneakerDetail = document.getElementById("sneakerDetail");
 }
 
   // ----------ADMIN POPUP----------
-  changePwdBtnAdmin.onclick = function () {
+  /*changePwdBtnAdmin.onclick = function () {
     changePwdModal.style.display = "block";
     resetPasswordModal();
   };
@@ -129,7 +129,7 @@ const sneakerDetail = document.getElementById("sneakerDetail");
 
   saveBtnAdmin.onclick = function () {
     modifyAdmin(profile);
-  };
+  };*/
 
 
 // Cerrar modales de modificación
@@ -187,7 +187,7 @@ window.onclick = function (event) {
   //Change password popup functionality, inside this initial on document loaded method as it relies on the
   //form existing even though it isnt shown to be able to listen to it, if it isnt inside this on document
   //loaded method an error occurs as it tries to listen to the form before it is loaded
-  document
+  /*document
     .getElementById("changePasswordForm")
     .addEventListener("submit", async function (e) {
       e.preventDefault();
@@ -198,13 +198,13 @@ window.onclick = function (event) {
 
       let actualProfile;
 
-      /*if (["CARD_NO"] in profile) {
+      if (["CARD_NO"] in profile) {
         actualProfile = JSON.parse(localStorage.getItem("actualUser"));
       } else if (["CURRENT_ACCOUNT"] in profile) {
         actualProfile = await response.data;
-      }*/
+      }
 
-      //HABRIA QUE CAMBIAR PARA QUE EL SERVER COMPRUEBE LA CONTRSEAÑAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      
       actualProfile = profile;
 
       const profile_code = actualProfile["PROFILE_CODE"];
@@ -255,7 +255,7 @@ window.onclick = function (event) {
             console.log("Code: " + data.code);
             actualProfile.PSWD = newPassword;
             document.getElementById("messageSuccessPassword").innerHTML = data.message;
-            /*if (["CARD_NO"] in profile) {
+            if (["CARD_NO"] in profile) {
               console.log("IS A USER");
               localStorage.setItem("actualUser", JSON.stringify(actualProfile));
             } else if (["CURRENT_ACCOUNT"] in profile) {
@@ -264,7 +264,7 @@ window.onclick = function (event) {
                 "actualProfile",
                 JSON.stringify(actualProfile)
               );
-            }*/
+            }
 
             setTimeout(() => {
               document.getElementById("messageSuccessPassword").innerHTML = ""; // clean the modified message
@@ -279,7 +279,7 @@ window.onclick = function (event) {
           //DEBUG console.log(error);
         }
       }
-    });
+    });*/
 });
 
 /******************************************************************************************************

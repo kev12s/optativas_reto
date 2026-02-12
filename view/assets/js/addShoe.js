@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await res.json();
 
-      if (data.success) {
+      if (data.status === 'success') {
         setMsg("Shoe añadido correctamente", true);
         form.reset();
       } else {
-        setMsg(data.error || "Error al añadir");
+        setMsg(data.message || "Error al añadir");
       }
     } catch (err) {
       setMsg("Error de red o servidor");

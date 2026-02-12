@@ -21,15 +21,14 @@ class UserModel
     public function loginUser($username, $password)
     {
         $query = "SELECT * FROM PROFILE_ P JOIN USER_ U ON P.PROFILE_CODE = U.PROFILE_CODE
-        WHERE USER_NAME = :username AND PSWD = :pass";
+            WHERE USER_NAME = :username";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":username", $username);
-        $stmt->bindParam(":pass", $password);
         $stmt->execute();
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($result) {
+        if ($result && password_verify($password, $result['PSWD'])) {
             return $result;
         } else {
             return null;
@@ -39,15 +38,14 @@ class UserModel
     public function loginAdmin($username, $password)
     {
         $query = " SELECT * FROM PROFILE_ P JOIN ADMIN_ A ON P.PROFILE_CODE=A.PROFILE_CODE
-        WHERE USER_NAME = :username AND PSWD = :pass";
+            WHERE USER_NAME = :username";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":username", $username);
-        $stmt->bindParam(":pass", $password);
         $stmt->execute();
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($result) {
+        if ($result && password_verify($password, $result['PSWD'])) {
             return $result;
         } else {
             return null;

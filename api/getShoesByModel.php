@@ -14,17 +14,12 @@ if (empty($model)) {
     fail("Model name is required");
 }
 
-
-$model = urldecode($model);
-$model = trim($model);
-
-error_log("Received model: " . $model);
-
 try {
     $controller = new controller();
     $shoes = $controller->getShoesByModel($model);
     
     if ($shoes) {
+        http_response_code(200);
         http_response_code(200);
         echo json_encode([
             'status' => 'success',
@@ -33,6 +28,7 @@ try {
             'data' => $shoes
         ], JSON_UNESCAPED_UNICODE);
     } else {
+        http_response_code(404);
         http_response_code(404);
         echo json_encode([
             'status' => 'error',

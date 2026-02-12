@@ -51,32 +51,29 @@ CREATE TABLE ORDER_ (
 );
 
 INSERT INTO PROFILE_ (PROFILE_CODE, EMAIL, USER_NAME, PSWD, TELEPHONE, NAME_, SURNAME) VALUES
-(1, 'juan.perez@email.com', 'juanP', '1234', 611223344, 'Juan', 'Pérez'),
-(2, 'maria.garcia@email.com', 'mariag', '1234', 622334455, 'María', 'García'),
-(3, 'carlos.lopez@email.com', 'carlosl', '1234', 633445566, 'Carlos', 'López'),
-(4, 'ana.martinez@email.com', 'anam', '1234', 644556677, 'Ana', 'Martínez'),
-(5, 'pedro.rodriguez@email.com', 'pedror', '1234', 655667788, 'Pedro', 'Rodríguez');
+(1, 'juan.perez@email.com', 'juanP', '$2y$10$qhS3KKOox0S.aNVbYWp7VunfmP/lCHYqoxdCM10KMjScgPO5JiMFy', 611223344, 'Juan', 'Pérez'),
+(2, 'maria.garcia@email.com', 'mariag', '$2y$10$qhS3KKOox0S.aNVbYWp7VunfmP/lCHYqoxdCM10KMjScgPO5JiMFy', 622334455, 'María', 'García'),
+(3, 'carlos.lopez@email.com', 'carlosl', '$2y$10$qhS3KKOox0S.aNVbYWp7VunfmP/lCHYqoxdCM10KMjScgPO5JiMFy', 633445566, 'Carlos', 'López'),
+(4, 'ana.martinez@email.com', 'anam', '$2y$10$qhS3KKOox0S.aNVbYWp7VunfmP/lCHYqoxdCM10KMjScgPO5JiMFy', 644556677, 'Ana', 'Martínez'),
+(5, 'pedro.rodriguez@email.com', 'pedror', '$2y$10$qhS3KKOox0S.aNVbYWp7VunfmP/lCHYqoxdCM10KMjScgPO5JiMFy', 655667788, 'Pedro', 'Rodríguez');
 
 INSERT INTO USER_ (PROFILE_CODE, GENDER, CARD_NO) VALUES
-(1, 'Man', '1234-5678-9012-3456'),
-(2, 'Female', '2345-6789-0123-4567'),
-(3, 'Man', '3456-7890-1234-5678');
+(1, 'Man', 'AA1234567890123456'),
+(2, 'Female', 'AA2345678901234567'),
+(3, 'Man', 'AA3456789012345678');
 
 INSERT INTO ADMIN_ (PROFILE_CODE, CURRENT_ACCOUNT) VALUES
-(4, 'ES12-3456-7890-1234-5678'),
-(5, 'ES98-7654-3210-9876-5432');
+(4, 'ES123456789012345678'),
+(5, 'ES987654321098765432');
 
 
 INSERT INTO SHOE 
 (PRICE, MODEL, SIZE, EXCLUSIVE, MANUFACTER_DATE, COLOR, ORIGIN, BRAND, RESERVED, STOCK, IMAGE_FILE)
 VALUES
 (79.99, 'Air Max', 42, 'FALSE', '2024-01-10', 'Negro', 'España', 'Nike', 'FALSE', 50, 'nike_airmax90_negras.jpg'),
+(79.99, 'Air Max', 45, 'FALSE', '2024-01-10', 'Negro', 'España', 'Nike', 'FALSE', 50, 'nike_airmax90_negras.jpg'),
 (120.50, 'Samba', 40, 'TRUE', '2023-11-05', 'Negro', 'Italia', 'Adidas', 'FALSE', 30, 'adidas_samba_negras.jpg'),
 (95.00, 'Caven', 41, 'FALSE', '2024-02-20', 'Azul', 'Portugal', 'Puma', 'TRUE', 10, 'puma_caven_azul.jpg');
-INSERT INTO SHOE 
-(PRICE, MODEL, SIZE, EXCLUSIVE, MANUFACTER_DATE, COLOR, ORIGIN, BRAND, RESERVED, STOCK, IMAGE_FILE)
-VALUES
-(79.99, 'Air Max', 45, 'FALSE', '2024-01-10', 'Negro', 'España', 'Nike', 'FALSE', 50, 'nike_airmax90_negras.jpg');
 
 INSERT INTO ORDER_ 
 (PROFILE_CODE, SHOE_ID, DATE_, QUANTITY)

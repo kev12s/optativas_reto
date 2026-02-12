@@ -16,6 +16,7 @@ $data = json_decode(file_get_contents("php://input"), true);
 $username = $data['username'] ?? '';
 $password = $data['password'] ?? '';
 
+// Don't hash here - send plain password to controller
 $controller = new controller();
 $user = $controller->loginUser($username, $password);
 

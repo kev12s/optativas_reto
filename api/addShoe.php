@@ -65,7 +65,7 @@ if ($manufacture_date !== null && $manufacture_date !== '') {
 $exclusive = ($exclusive === 'TRUE') ? 'TRUE' : 'FALSE';
 $reserved  = ($reserved === 'TRUE') ? 'TRUE' : 'FALSE';
 
-/* 4) Imagen por defecto */
+/* Imagen por defecto */
 $image_file = "default_shoe.png";
 
 try {
