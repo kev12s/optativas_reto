@@ -1,8 +1,7 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 
-require_once '../Config/Database.php';
-require_once '../model/ShoeModel.php';
+require_once '../controller/controller.php';
 
 function fail(string $msg, int $code = 400) {
     http_response_code($code);
@@ -15,13 +14,11 @@ function fail(string $msg, int $code = 400) {
     exit;
 }
 
-
 $input = file_get_contents("php://input");
 $data = json_decode($input, true);
 if (!is_array($data)) {
     fail("Invalid JSON");
 }
-
 
 $brand  = trim($data['brand'] ?? '');
 $model  = trim($data['model'] ?? '');
@@ -65,15 +62,13 @@ if ($manufacture_date !== null && $manufacture_date !== '') {
 $exclusive = ($exclusive === 'TRUE') ? 'TRUE' : 'FALSE';
 $reserved  = ($reserved === 'TRUE') ? 'TRUE' : 'FALSE';
 
-/* 4) Imagen por defecto */
+/* Imagen por defecto */
 $image_file = "default_shoe.png";
 
 try {
-    $database = new Database();
-    $db = $database->getConnection();
-    $shoeModel = new ShoeModel($db);
-
-    $newId = $shoeModel->insertShoe([
+    $controller = new controller();
+    
+    $newId = $controller->insertShoe([
         'price' => (float)$price,
         'model' => $model,
         'size' => (float)$size,
@@ -98,3 +93,4 @@ try {
 } catch (Throwable $e) {
     fail("Database error", 500);
 }
+?>

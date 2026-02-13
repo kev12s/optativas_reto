@@ -45,14 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await res.json();
 
-      if (data.success) {
-        setMsg("Shoe añadido correctamente", true);
+      if (data.status === "success") {
+        setMsg("Shoe added successfully! ID: " + data.data.id, true);
         form.reset();
       } else {
-        setMsg(data.error || "Error al añadir");
+        setMsg(data.message || "Error adding shoe");
       }
     } catch (err) {
-      setMsg("Error de red o servidor");
+      setMsg("Network or server error: " + err.message);
     }
   });
 });

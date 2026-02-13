@@ -16,12 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("shoeDesc").textContent = shoe.BRAND;
     document.getElementById("shoePrice").textContent = `${shoe.PRICE} €`;
 
-
-
-    //const stock = Number(Shoe.stock ?? 0);
-   // document.getElementById("shoeStock").textContent =
-     // stock > 0 ? `Only ${stock} units left!` : "Out of stock";
-
     const img = document.getElementById("shoeImg");
     img.src = "../assets/img/" + shoe.IMAGE_FILE;
 
@@ -32,20 +26,47 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fetch all sizes for this model
     fetchSizesForModel(shoe.MODEL);
     
+    // Add event listener to size select to update stock when size changes
+    select.addEventListener("change", () => {
+      updateStockForSelectedSize(shoe.MODEL);
+    });
+    
   } catch (e) {
     document.getElementById("shoeName").textContent = "Error loading shoe data";
   }
 });
 
+async function updateStockForSelectedSize(modelName) {
+  const selectedSize = document.getElementById("shoeSizeSelect").value;
+  
+  if (!selectedSize) return;
+  
+  console.log(`Updating stock for model: ${modelName}, size: ${selectedSize}`);
+  
+  try {
+    const response = await fetch(`../../api/GetShoeByModelAndSize.php?model=${encodeURIComponent(modelName)}&size=${selectedSize}`);
+    const data = await response.json();
+    
+    console.log("Stock response:", data);
+    
+    if (data.status === "success" && data.data) {
+      const stock = Number(data.data.STOCK ?? 0);
+      document.getElementById("shoeStock").textContent = 
+        stock > 0 ? `Only ${stock} units left!` : "Out of stock";
+    } else {
+      document.getElementById("shoeStock").textContent = "Out of stock";
+    }
+  } catch (e) {
+    console.error("Error updating stock:", e);
+    document.getElementById("shoeStock").textContent = "Error loading stock";
+  }
+}
+
 async function fetchSizesForModel(modelName) {
   try {
     const cleanModel = modelName.trim();
-    const encodedModel = encodeURIComponent(cleanModel)
-      .replace(/\s+/g, '_')
-      .replace(/'/g, '%27')
-      .replace(/"/g, '%22');
     
-    const response = await fetch(`../../api/GetSizesByModel.php?model=${encodedModel}`);
+    const response = await fetch(`../../api/GetSizesByModel.php?model=${encodeURIComponent(cleanModel)}`);
     const data = await response.json();
     const sizes = data.data; // [38, 39, 40, 41, 42]
     
@@ -60,6 +81,10 @@ async function fetchSizesForModel(modelName) {
         opt.textContent = `Size ${size}`;
         select.appendChild(opt);
       });
+      // Update stock after sizes are loaded
+      setTimeout(() => {
+        updateStockForSelectedSize(modelName);
+      }, 100);
     } else {
       // Fallback: show current shoe size
       const shoeData = sessionStorage.getItem('shoe');
@@ -69,6 +94,9 @@ async function fetchSizesForModel(modelName) {
         opt.value = shoe.SIZE;
         opt.textContent = `Size ${shoe.SIZE}`;
         select.appendChild(opt);
+        setTimeout(() => {
+          updateStockForSelectedSize(modelName);
+        }, 100);
       }
     }
   } catch (e) {
@@ -113,12 +141,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const result = await response.json();
 
-        if (result.success) {
-          alert("Order placed successfully! Order ID: " + result.order_id);
+        if (result.status === "success") {
+          alert("Order placed successfully! Order ID: " + result.data.order_id);
           // Optional: redirect to cart page
           // window.location.href = 'cart.html';
         } else {
-          alert("Error: " + result.error);
+          alert("Error: " + result.message);
         }
       } catch (e) {
         alert("Error placing order: " + e.message);
